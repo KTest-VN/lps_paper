@@ -22,23 +22,25 @@ class Samplesheet:
         collector = []
         for file in list_file:
             try:
-                rs = re.search(r'Tab_S(\d+)_.*_([^_]+).csv', file.split('/')[-1])
+                rs = re.search(r'Tab_S(\d+)_([^_]+)_.*_([^_]+).csv', file.split('/')[-1])
                 collector.append(rs.groups() + (file,))
             except:
                 continue
         
-        data = pd.DataFrame(collector, columns=['index', 'pros', 'file'])
-        data['type'] = data['pros'].apply(lambda x: self.Categorize(x))
+        data = pd.DataFrame(collector, columns=['index', 'prefix', 'pros', 'file'])
+        data['type'] = data[['prefix', 'pros']].apply(lambda x: self.Categorize(x['prefix'], x['pros']), axis='columns')
         data['index'] = data['index'].astype(int)
         data = data.sort_values(by=['type', 'index']).reset_index(drop=True)
         return data
     
     @staticmethod
-    def Categorize(type: str):
-        if re.search(r'[A-Z]', type):
+    def Categorize(prefix:str, pros: str):
+        if re.search(r'[A-Z]', pros):
             return 'prs'
-        if re.search(']', type):
+        if prefix == 'mean':
             return 'mean_r2'
+        if prefix == 'coverage':
+            return 'coverage'
         else:
             return 'percentile'
 
@@ -51,8 +53,9 @@ class PdfPrinter:
         self.samplesheet = self.ss.sample_table
         self.caption_libs = {
             'mean_r2' : 'Imputation accuracy (mean and standard deviation across 22 autosomes) for eight genotyping arrays and six LPS coverages, evaluated across five populations for variant with allel frequency ',
+            'coverage' : 'Imputation coverage (mean and standard deviation across 22 autosomes) for eight genotyping arrays and six LPS coverages, evaluated across five populations for variant with allel frequency ',
             'prs': 'Mean and the standard deviation of PGS correlation of eight genotyping arrays and six LPS coverages of the phenotype ',
-            'percentile': 'Mean absolute difference of percentile ranking between PGSs estimated from imputed genotyping data of eight genotyping arrays and six LPS coverages and PGS estimated from WGS in 6 different populations with PRsice p-value setting of '
+            'percentile': 'Mean absolute difference of percentile ranking between PGSs estimated from imputed genotyping data of eight genotyping arrays and six LPS coverages and PGS estimated from WGS in 5 different populations with PRsice p-value setting of '
         }
 
         self.phenotype_lib = {
@@ -69,21 +72,28 @@ class PdfPrinter:
         for row in mean_r2_table.to_dict(orient='records'):
             caption = f'Table S. {row["index"]} ' + self.caption_libs[row['type']] + row['pros']
             self.addCaption(caption=caption)
-            self.addTable(row['file'])
+            self.addTable(row['file'], row['type'])
+
+        ## Render coverage
+        mean_r2_table = self.samplesheet[self.samplesheet['type'] == 'coverage']
+        for row in mean_r2_table.to_dict(orient='records'):
+            caption = f'Table S. {row["index"]} ' + self.caption_libs[row['type']] + row['pros']
+            self.addCaption(caption=caption)
+            self.addTable(row['file'], row['type'])
 
         ## Render prs
         mean_r2_table = self.samplesheet[self.samplesheet['type'] == 'prs']
         for row in mean_r2_table.to_dict(orient='records'):
             caption = f'Table S. {row["index"]} ' + self.caption_libs[row['type']] + self.phenotype_lib[row['pros']]
             self.addCaption(caption=caption)
-            self.addTable(row['file'])
+            self.addTable(row['file'], row['type'])
 
         ## Render percentile
         mean_r2_table = self.samplesheet[self.samplesheet['type'] == 'percentile']
         for row in mean_r2_table.to_dict(orient='records'):
             caption = f'Table S. {row["index"]} ' + self.caption_libs[row['type']] + row['pros']
             self.addCaption(caption=caption)
-            self.addTable(row['file'])
+            self.addTable(row['file'], row['type'])
         
         ## Save to file
         self.save()
@@ -92,10 +102,14 @@ class PdfPrinter:
         p = self.docx.add_paragraph()
         p.add_run(caption)
     
-    def addTable(self, table_path: str):
+    def addTable(self, table_path: str, type: str):
         data = pd.read_csv(table_path)
         t = self.docx.add_table(data.shape[0]+1, data.shape[1])
 
+        # correct column name.
+        if type == 'percentile':
+            data = data.rename(columns={'array': 'Array/LPS', 'trait': 'Trait'})
+      
         # add the header rows.
         for j in range(data.shape[-1]):
             t.cell(0,j).text = data.columns[j]

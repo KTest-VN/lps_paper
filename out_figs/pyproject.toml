@@ -1,0 +1,11 @@
+[project]
+name = "out-figs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.3",
+    "pymupdf>=1.25.5",
+    "python-docx>=1.1.2",
+]

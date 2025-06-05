@@ -1,6 +1,14 @@
 site_name: LPS Article
 nav:
-  - Home: index.md
+  - Introduction: index.md
+  - LPS performance:
+    - Low-pass imputation: lps/lps_imputation.md
+    - Pseudo-array imputation: lps/array_imputation.md
+    - Evaluation methods: lps/lps_evaluation.md
+  - PRS performance:
+    - PRS processing: prs/prs_processing.md
+    - PRS evaluation: prs/prs_evaluation.md
+  - Available data: available_data.md
   - About: about.md
 repo_name: KTest-VN/lps_paper
 repo_url: https://github.com/KTest-VN/lps_paper
@@ -12,6 +20,9 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+    - content.footnote.tooltips
+    - navigation.instant
+    - navigation.instant.prefetch
   font:
     text: Roboto
     code: Roboto Mono
@@ -36,15 +47,22 @@ theme:
         name: Switch to system preference
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - abbr
   - attr_list
+  - footnotes
 
 plugins:
   - mkdocs-jupyter:
-      execute: true
+      execute: false

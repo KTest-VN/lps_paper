@@ -1,4 +1,5 @@
-## data analysis for LPS paper
-Script for data analysis
+# Polygenic score and imputation accuracy from low-pass sequencing in diverse population
 
-the nf_lps_evaluator contains nextflow script for processing imputed outputs
+## Introduction
+
+## Material and methods

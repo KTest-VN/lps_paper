@@ -2,3 +2,11 @@ data/raw_snpwise_accuracy/array/*
 data/raw_snpwise_accuracy/lps/*
 *.DS_Store
 .venv
+.cache
+docs/evaluation/jupyter-files/.ipynb_checkpoints
+evaluation/downstream/out_figs/.ipynb_checkpoints
+
+# Ignore Jupyter Notebook output files
+evaluation/downstream/out_tables/.ipynb_checkpoints
+evaluation/downstream/out_tables/mean_r2_summary_*
+evaluation/downstream/out_figs/acc.pdf

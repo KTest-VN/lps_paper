@@ -1,5 +1,5 @@
-data/raw_snpwise_accuracy/array/*
-data/raw_snpwise_accuracy/lps/*
+evaluation/downstream/data/raw_snpwise_accuracy/array/*
+evaluation/downstream/data/raw_snpwise_accuracy/lps/*
 *.DS_Store
 .venv
 .cache

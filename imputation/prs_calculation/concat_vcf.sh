@@ -1,0 +1,4 @@
+set -ue
+
+bcftools concat -Oz -o SAS-1.25_concat.vcf.gz  SAS-1.25_chr12_correct_name.vcf.gz SAS-1.25_chr10_correct_name.vcf.gz SAS-1.25_chr11_correct_name.vcf.gz SAS-1.25_chr1_correct_name.vcf.gz SAS-1.25_chr13_correct_name.vcf.gz SAS-1.25_chr16_correct_name.vcf.gz SAS-1.25_chr17_correct_name.vcf.gz SAS-1.25_chr14_correct_name.vcf.gz SAS-1.25_chr18_correct_name.vcf.gz SAS-1.25_chr15_correct_name.vcf.gz SAS-1.25_chr2_correct_name.vcf.gz SAS-1.25_chr19_correct_name.vcf.gz SAS-1.25_chr21_correct_name.vcf.gz SAS-1.25_chr22_correct_name.vcf.gz SAS-1.25_chr20_correct_name.vcf.gz SAS-1.25_chr3_correct_name.vcf.gz SAS-1.25_chr4_correct_name.vcf.gz SAS-1.25_chr5_correct_name.vcf.gz SAS-1.25_chr8_correct_name.vcf.gz SAS-1.25_chr6_correct_name.vcf.gz SAS-1.25_chr7_correct_name.vcf.gz SAS-1.25_chr9_correct_name.vcf.gz
+bcftools index SAS-1.25_concat.vcf.gz

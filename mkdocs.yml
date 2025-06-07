@@ -72,3 +72,6 @@ extra_css:
 plugins:
   - mkdocs-jupyter:
       execute: false
+  - bibtex:
+      bib_file: "docs/assets/refs.bib"
+      enable_inline_citations: false

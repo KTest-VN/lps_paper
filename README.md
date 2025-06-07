@@ -12,7 +12,7 @@ These results highlight the potential of low-pass sequencing as a flexible, powe
 
 ## Analytical Pipeline Summary
 
-![Overview](https://raw.githubusercontent.com/KTest-VN/lps_paper/refs/heads/batch_code/docs/assets/img/Fig1.jpg)
+![Overview](https://raw.githubusercontent.com/KTest-VN/lps_paper/refs/heads/main/docs/assets/img/Fig1.jpg)
 <figcaption style="
     max-width: 100%; 
     margin: 0 auto; 

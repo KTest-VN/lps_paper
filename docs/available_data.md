@@ -19,18 +19,23 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3">Prepare data</td>
+      <td rowspan="4">Prepare data</td>
       <td>Reference panel</td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td>Reference mapping</td>
+      <td>Prepare mapping reference</td>
       <td></td>
-      <td>hg38</td>
+      <td>mapping reference</td>
     </tr>
     <tr>
-      <td>Meta data</td>
+      <td>Prepare phasing reference</td>
+      <td></td>
+      <td><a href="https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps">phasing reference</a></td>
+    </tr>
+    <tr>
+      <td>Prepare Meta data</td>
       <td></td>
       <td>
             <li>batch_samples_list</li>

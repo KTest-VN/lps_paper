@@ -1,0 +1,1 @@
+VCF files are filtered to retain only bi-allelic SNPs with an allele count ≥ 2 to reduce noise in imputation and evaluation.

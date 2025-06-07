@@ -1,13 +1,17 @@
 site_name: LPS Article
 nav:
   - Introduction: README.md
-  - LPS performance:
-    - Low-pass imputation: lps/lps_imputation.md
-    - Pseudo-array imputation: lps/array_imputation.md
-    - Evaluation methods: lps/lps_evaluation.md
-  - PRS performance:
-    - PRS processing: prs/prs_processing.md
-    - PRS evaluation: prs/prs_evaluation.md
+  - Processing data:
+    - Variant Filtering: processing_data/variant_filtering.md
+    - Data Simulation: processing_data/data_simulation.md
+    - Cross-Validation Framework: processing_data/cross_validation.md
+  - Imputation:
+    - Low-pass imputation: imputation/lps_imputation.md
+    - Pseudo-array imputation: imputation/array_imputation.md
+  - Evaluation:
+    - Merge imputed data: evaluation/merge_imputed_data.md
+    - LPS performance: evaluation/lps_performance.md
+    - PRS performance: evaluation/prs_performace.md
   - Available data: available_data.md
   - About: about.md
 repo_name: KTest-VN/lps_paper

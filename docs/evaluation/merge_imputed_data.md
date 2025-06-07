@@ -1,0 +1,1 @@
+- Imputed genotypes are merged by superpopulation. 

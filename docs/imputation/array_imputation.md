@@ -1,8 +1,9 @@
 ## Input data
 
-## Processing data
-
 ## Array imputation process
+
+- Phasing: `SHAPEIT5`
+- Imputation: `Minimac4`
 
 1. GET_ref_vcf
 2. GET_target_vcf

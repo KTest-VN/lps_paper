@@ -1,0 +1,7 @@
+- 10-fold cross-validation is used.
+- Samples are stratified by superpopulation (EAS, EUR, SAS, AFR, AMR) to ensure balanced representation:
+    - 4 batches of 251 samples
+    - 6 batches of 250 samples
+- In each fold:
+    - 90% of data serves as the reference panel.
+    - 10% of data serves as the target set for imputation.

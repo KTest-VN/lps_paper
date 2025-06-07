@@ -1,6 +1,6 @@
 site_name: LPS Article
 nav:
-  - Introduction: index.md
+  - Introduction: README.md
   - LPS performance:
     - Low-pass imputation: lps/lps_imputation.md
     - Pseudo-array imputation: lps/array_imputation.md

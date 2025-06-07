@@ -4,7 +4,7 @@
 
 Genome-wide association studies (GWAS) and polygenic score (PGS) analyses typically rely on large-scale genetic data, which has traditionally been collected using SNP arrays and genotype imputation. However, low-pass whole-genome sequencing (lpWGS) is emerging as a promising alternative.
 
-In this study, we compare the imputation accuracy and polygenic score performance of eight leading genotyping arrays and six lpWGS coverage levels (ranging from 0.5x to 2x) across diverse populations. Using data from 2,504 individuals in the 1000 Genomes Project, we apply a 10-fold cross-imputation approach to assess both imputation and PGS accuracy for four complex traits.
+In this study, we compare the imputation accuracy and polygenic score performance of eight leading genotyping arrays and six lpWGS coverage levels (ranging from 0.5x to 2x) across diverse populations. Using data from 2,504 individuals in the 1000 Genomes Project[@byrska2022high], we apply a 10-fold cross-imputation approach to assess both imputation and PGS accuracy for four complex traits.
 
 Our findings show that lpWGS performs on par with population-specific genotyping arrays in terms of both imputation accuracy and polygenic score estimation. Notably, lpWGS outperforms arrays in underrepresented populations and shows greater accuracy for rare and low-frequency variants.
 

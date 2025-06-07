@@ -62,6 +62,10 @@ markdown_extensions:
   - abbr
   - attr_list
   - footnotes
+  - pymdownx.blocks.caption
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 plugins:
   - mkdocs-jupyter:

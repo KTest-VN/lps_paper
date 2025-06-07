@@ -1,0 +1,9 @@
+.md-typeset p {
+  text-align: justify;
+}
+
+.md-typeset ul li,
+.md-typeset ol li {
+  margin-bottom: 0.6em;  /* Reduce vertical space between items */
+  line-height: 1.5;      /* Tighter line spacing within each item */
+}

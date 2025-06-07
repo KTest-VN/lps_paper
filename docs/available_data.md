@@ -8,71 +8,27 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 
 ## Summary all regarding data 
 
-<table>
-  <thead>
-    <tr>
-      <th>Process</th>
-      <th>Step</th>
-      <th>Input</th>
-      <th>Output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="4">Prepare data</td>
-      <td>Reference panel</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Prepare mapping reference</td>
-      <td></td>
-      <td>mapping reference</td>
-    </tr>
-    <tr>
-      <td>Prepare phasing reference</td>
-      <td></td>
-      <td><a href="https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps">phasing reference</a></td>
-    </tr>
-    <tr>
-      <td>Prepare Meta data</td>
-      <td></td>
-      <td>
-            <li>batch_samples_list</li>
-            <li><a href="samplesheet.csv">samplesheet.csv</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4">LPS performance</td>
-      <td>Processing data</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>LPS imputation</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Array imputation</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>LPS performance</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td rowspan="2">PRS performance</td>
-      <td>PRS processing</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>PRS performance</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+::spantable::
+
+| Process               | Step                         | Input                        | Output                                    |
+|-----------------------|------------------------------|------------------------------|-------------------------------------------|
+| Prepare data  @span   | Reference panel              |                              |                                           |
+|                       | Prepare mapping reference    |                              | mapping reference                         |
+|                       | Prepare phasing reference    |                              | [phasing reference][1]                    |
+|                       | Prepare SNP data of 8 arrays | [Nguyen et al., 2022][2][^1] | [SNP-array data][3]                       |
+|                       | Prepare meta data            |                              | - batch_samples_list<br>- samplesheet.csv |
+| LPS performance @span | Processing data              |                              |                                           |
+|                       | LPS imputation               |                              |                                           |
+|                       | Array imputation             |                              |                                           |
+|                       | LPS performance              |                              |                                           |
+| PRS performance @span | PRS processing               |                              |                                           |
+|                       | PRS performance              |                              |                                           |
+
+::end-spantable::
+
+
+[1]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps 
+[2]: https://github.com/datngu/SNP_array_comparison/tree/main/data/Array_manifests_bed_hg38
+[3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/array_hg38
+
+[^1]: Nguyen, D.T., Tran, T.T.H., Tran, M.H. et al. A comprehensive evaluation of polygenic score and genotype imputation performances of human SNP arrays in diverse populations. Sci Rep 12, 17556 (2022).

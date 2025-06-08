@@ -19,6 +19,8 @@
 
 ### Prepare imputation reference
 
+[rename_chr.txt][5] was used to convert to chromosome numeric format.
+
 ```bash linenums="1"
 --8<--
 imputation/pseudo-array_imputation/_prepare_ref.sh
@@ -40,3 +42,4 @@ imputation/pseudo-array_imputation/impute_minimac4.sh
 [1]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps 
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list
 [4]: https://github.com/KTest-VN/lps_paper/tree/main/imputation/pseudo-array_imputation/bin
+[5]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/rename_chr.txt

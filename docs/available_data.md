@@ -14,10 +14,10 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 | Process                   | Step                       | Input                                                                                                              | Output      |
 |---------------------------|----------------------------|--------------------------------------------------------------------------------------------------------------------|-------------|
 | Processing data  @span    | Variant Filtering          |                                                                                                                    |             |
-|                           | Data Simulation            |                                                                                                                    | - Pseudo array VCFs <br>- Downsampling VCFs|
+|                           | Data Simulation            | - [SNP-array pos data][3][@nguyen2022comprehensive]<br>- [Batch_sample_list][2]<br>- Imputation panel                                                                                                                    | - Pseudo array VCFs <br>- Downsampling VCFs|
 |                           | Cross-Validation Framework |                                                                                                                    |             |
 | Genotype Imputation @span | lpWGS  imputation          | - [GRCh38/hg38][4]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Downsampling VCFs                                               |             |
-|                           | SNP arrays imputation      | - [SNP-array data][3][@nguyen2022comprehensive]<br>- [Batch_sample_list][2]<br>- Pseudo array VCFs<br>- Imputation panel |             |
+|                           | SNP arrays imputation      | - [Batch_sample_list][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Pseudo array VCFs |             |
 | Evaluation @span          | Merge imputed data         |                                                                                                                    |             |
 |                           | lpWGS performance          |                                                                                                                    |             |
 |                           | PRS performance            |                                                                                                                    |             |
@@ -27,5 +27,5 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 
 [1]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps 
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list
-[3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/array_hg38
+[3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/input_array
 [4]: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/

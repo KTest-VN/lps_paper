@@ -1,15 +1,21 @@
-## Requirement
-- Docker (version &ge; 26.1.1)
-- Images: [ndatth/ubuntu:22.04](https://hub.docker.com/r/ndatth/ubuntu/tags) 
-- Ubuntu (8 CPUs, 32 GB)
+!!! abstract "Requirements"
+    - Ubuntu 22.04 (8 CPUs, 32 GB)
+    - bcftools (version==1.13)
+    - shapeit5 (version==5.1.1)
+    - Minimac3 (version==2.0.1)
+    - Minimac4 (version==1.0.3)
 
 ## Input data
 
-- [SNP-array data][3][@nguyen2022comprehensive]
 - [Batch_sample_list][2]
-- Pseudo VCFs
+- [Phasing reference][1]
+- Imputation panel
+- Pseudo array VCFs
 
 ## Array imputation process
+
+!!! info
+    Use binaries being in the [binary folder][4].
 
 ### Prepare imputation reference
 
@@ -18,19 +24,19 @@
 imputation/pseudo-array_imputation/_prepare_ref.sh
 --8<--
 ```
-### Prepare 
+### Imputation process 
 
-1. GET_target_vcf
-2. GET_pseudo_array
-
-3. DO_index_minimac3
-4. IMPUTE_minimac4
+```bash linenums="1"
+--8<--
+imputation/pseudo-array_imputation/impute_minimac4.sh
+--8<--
+```
 
 ## Output data
 
 
 
 
-
+[1]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps 
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list
-[3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/array_hg38
+[4]: https://github.com/KTest-VN/lps_paper/tree/main/imputation/pseudo-array_imputation/bin

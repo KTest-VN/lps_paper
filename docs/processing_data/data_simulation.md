@@ -2,6 +2,13 @@
 
 Simulated at six coverage levels (0.5x–2.0x) from mapped CRAM files, adjusting for a 9% duplication rate and incorporating realistic coverage variability.
 
+### Input data
+
+- [url_metadata]()
+
+### Downsampling 
+
+
 [bam_sampling.py][4] was used to Downsampling VCF files.
 
 ```bash linenums="1"

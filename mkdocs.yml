@@ -3,8 +3,8 @@ nav:
   - Introduction: README.md
   - Processing data:
     - Variant Filtering: processing_data/variant_filtering.md
-    - Data Simulation: processing_data/data_simulation.md
     - Cross-Validation Framework: processing_data/cross_validation.md
+    - Data Simulation: processing_data/data_simulation.md
   - Imputation:
     - Low-pass imputation: imputation/lps_imputation.md
     - Pseudo-array imputation: imputation/array_imputation.md

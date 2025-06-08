@@ -36,3 +36,6 @@ bam_sampling.py --bam ${SAMPLE_ID}.bam         \
 ## Release space
 rm ${SAMPLE_ID}.bam
 
+## Index bam file
+samtools index ${SAMPLE_ID}_0.5_lps.bam ${SAMPLE_ID}_0.75_lps.bam ${SAMPLE_ID}_1.0_lps.bam ${SAMPLE_ID}_1.25_lps.bam ${SAMPLE_ID}_1.5_lps.bam ${SAMPLE_ID}_2.0_lps.bam
+

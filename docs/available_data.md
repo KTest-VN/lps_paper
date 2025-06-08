@@ -13,11 +13,11 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 
 | Process                   | Step                       | Input                                                                                                              | Output      |
 |---------------------------|----------------------------|--------------------------------------------------------------------------------------------------------------------|-------------|
-| Processing data  @span    | Variant Filtering          |                                                                                                                    |             |
-|                           | Data Simulation            | - [SNP-array pos data][3][@nguyen2022comprehensive]<br>- [Batch_sample_list][2]<br>- Imputation panel                                                                                                                    | - Pseudo array VCFs <br>- Downsampling VCFs|
-|                           | Cross-Validation Framework |                                                                                                                    |             |
-| Genotype Imputation @span | lpWGS  imputation          | - [GRCh38/hg38][4]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Downsampling VCFs                                               |             |
-|                           | SNP arrays imputation      | - [Batch_sample_list][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Pseudo array VCFs |             |
+| Processing data  @span    | Cross-Validation Framework |                                                                                                                    |             |
+|    | Variant Filtering          | - [3202 samples 1KGP][7][@byrska2022high]<br> - [2504 samples list][8]                                                                                                                    | - Imputation panel            |
+|                           | Data Simulation            | - [SNP-array pos data][3][@nguyen2022comprehensive]<br>- [samples list of batch][2]<br>- Imputation panel<br>- [GRCh38/hg38][4]<br>- [URL metadata][6]                                                                                                                    | - Pseudo array VCFs <br>- Downsampling VCFs|
+| Genotype Imputation @span | lpWGS  imputation          | - [samples list of batch][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Downsampling VCFs                                               | - lpWGS VCF files        |
+|                           | SNP arrays imputation      | - [samples list of batch][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Pseudo array VCFs | - SNP-array VCF files            |
 | Evaluation @span          | Merge imputed data         |                                                                                                                    |             |
 |                           | lpWGS performance          |                                                                                                                    |             |
 |                           | PRS performance            |                                                                                                                    |             |
@@ -29,3 +29,6 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list
 [3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/input_array
 [4]: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/
+[6]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/meta_10_folds
+[7]: https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased
+[8]: https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/download_2504_AC_filter.sh

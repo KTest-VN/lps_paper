@@ -7,7 +7,7 @@
 
 ## Input data
 
-- [Batch_sample_list][2]
+- [samples list of batch][2]
 - [Phasing reference][1]
 - Imputation panel
 - Pseudo array VCFs

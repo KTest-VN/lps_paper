@@ -2,14 +2,22 @@
 
 Simulated at six coverage levels (0.5x–2.0x) from mapped CRAM files, adjusting for a 9% duplication rate and incorporating realistic coverage variability.
 
+!!! info "Requirements"
+    - Ubuntu 22.04 (8 CPUs, 32 GB)
+    - wget (version==1.21.2)
+    - samtools (version==1.13)
+    - python>=3.11
+    - pysam==0.22.0 
+
 ### Input data
 
-- [url_metadata]()
+- [URL metadata][6]
+- [GRCh38/hg38][7]
 
 ### Downsampling 
 
 
-[bam_sampling.py][4] was used to Downsampling VCF files.
+[bam_sampling.py][4] was used to downsampling bam files.
 
 ```bash linenums="1"
 --8<--
@@ -41,7 +49,7 @@ Eight genotyping arrays are simulated using known marker sets and harmonized to 
 
 ### Input data
 - [SNP-array pos data][3][@nguyen2022comprehensive]
-- [Batch_sample_list][2]
+- [samples list of batch][2]
 - Imputation panel
 
 
@@ -60,3 +68,5 @@ imputation/pseudo-array_imputation/_prepare_pseudo.sh
 [3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/input_array
 [4]: https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/bam_sampling.py
 [5]: https://github.com/KTest-VN/lps_paper/blob/main/imputation/pseudo-array_imputation/bin/get_pseudo_array.sh
+[6]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/meta_10_folds
+[7]: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/

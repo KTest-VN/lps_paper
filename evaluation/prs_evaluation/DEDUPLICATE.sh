@@ -1,0 +1,1 @@
+plink         --bfile AMR-Axiom_UKB_WCSG         --threads 2         --make-bed         --keep AMR-Axiom_UKB_WCSG.QC.fam         --out AMR-Axiom_UKB_WCSG.dedup         --extract AMR-Axiom_UKB_WCSG.nodup         --memory 128000

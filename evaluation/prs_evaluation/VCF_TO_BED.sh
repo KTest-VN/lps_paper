@@ -1,0 +1,1 @@
+plink --vcf AMR-Axiom_UKB_WCSG_anno.vcf.gz       --make-bed  --const-fid --out AMR-Axiom_UKB_WCSG       --threads 2       --memory 128000

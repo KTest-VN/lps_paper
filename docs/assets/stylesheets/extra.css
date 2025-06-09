@@ -7,3 +7,14 @@
   margin-bottom: 0.6em;  /* Reduce vertical space between items */
   line-height: 1.5;      /* Tighter line spacing within each item */
 }
+
+.md-grid {              /* Wider middle column of pages*/
+  max-width: 73.5%; 
+}
+
+.md-typeset .tabbed-content {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+

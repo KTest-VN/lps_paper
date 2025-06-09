@@ -5,7 +5,7 @@
 
 ## Input data
 
-- [samples list of batch][4]
+- [Samples list of batch][4]
 - [Phasing reference][5]
 - Imputation panel
 - Downsampling VCFs

@@ -30,9 +30,9 @@ This study analyzes data from 2,504 unrelated individuals in the 1000 Genomes Pr
 ## Processes
 
 1. Processing data:
+      - [Cross-Validation Framework](processing_data/cross_validation.md): A 10-fold stratified cross-validation ensures balanced population representation for imputation testing.
       - [Variant Filtering](processing_data/variant_filtering.md): VCF files are filtered to improve imputation accuracy.
       - [Data Simulation](processing_data/data_simulation.md): Low-pass sequencing and eight SNP arrays are simulated with realistic noise and aligned to hg38.
-      - [Cross-Validation Framework](processing_data/cross_validation.md): A 10-fold stratified cross-validation ensures balanced population representation for imputation testing.
 2. Genotype Imputation: 
       - [lpWGS](imputation/lps_imputation.md): GLIMPSE2 is used for lpWGS imputation.
       - [SNP arrays](imputation/array_imputation.md): undergo phasing with SHAPEIT5 and imputation with Minimac4.

@@ -7,7 +7,7 @@
 
 ## Input data
 
-- [samples list of batch][2]
+- [Samples list of batch][2]
 - [Phasing reference][1]
 - Imputation panel
 - Pseudo array VCFs
@@ -19,13 +19,13 @@
 
 ### Prepare imputation reference
 
-[rename_chr.txt][5] was used to convert to chromosome numeric format.
-
 ```bash linenums="1"
 --8<--
 imputation/pseudo-array_imputation/_prepare_ref.sh
 --8<--
 ```
+[rename_chr.txt][5] was used to convert to chromosome numeric format.
+
 ### Imputation process 
 
 ```bash linenums="1"

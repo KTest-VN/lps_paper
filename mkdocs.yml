@@ -83,6 +83,8 @@ markdown_extensions:
   - neoteroi.spantable
   - admonition
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra_css:
   - assets/stylesheets/extra.css

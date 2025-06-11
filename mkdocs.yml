@@ -9,7 +9,7 @@ nav:
     - Low-pass imputation: imputation/lps_imputation.md
     - Pseudo-array imputation: imputation/array_imputation.md
   - Evaluation:
-    - Merge imputed data: evaluation/merge_imputed_data.md
+    - Restructure imputed data: evaluation/restructure_imputed_data.md
     - LPS performance: evaluation/lps_performance.md
     - PRS performance: evaluation/prs_performace.md
   - Available data: available_data.md

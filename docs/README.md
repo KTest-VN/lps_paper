@@ -37,6 +37,6 @@ This study analyzes data from 2,504 unrelated individuals in the 1000 Genomes Pr
       - [lpWGS](imputation/lps_imputation.md): GLIMPSE2 is used for lpWGS imputation.
       - [SNP arrays](imputation/array_imputation.md): undergo phasing with SHAPEIT5 and imputation with Minimac4.
 3. Evaluation:
-      - [Merge imputed data](evaluation/merge_imputed_data.md): Imputed data is merged by population
+      - [Restructure imputed data](evaluation/restructure_imputed_data.md): Imputed data is merged by population
       - [lpWGS performance](evaluation/lps_performance.md): compared to 30x WGS to assess accuracy
       - [PRS performance](evaluation/prs_performace.md): calculate PRS and compared to 30x WGS for accessing PRS performance

@@ -19,8 +19,8 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 | Genotype Imputation @span | lpWGS  imputation          | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Downsampling VCFs                                               | - lpWGS VCF files        |
 |                           | SNP arrays imputation      | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Pseudo array VCFs | - SNP-array VCF files            |
 | Evaluation @span          | Merge imputed data         | - lpWGS VCF files<br>- SNP-array VCF files<br>- Population meta                                                                                                                    | - resample lpWGS VCFs<br>- resample SNP-array VCFs            |
-|                           | lpWGS performance          |                                                                                                                    |             |
-|                           | PRS performance            |                                                                                                                    |             |
+|                           | lpWGS performance          | - resample lpWGS VCFs<br>- resample SNP-array VCFs                                                                                                                    |             |
+|                           | PRS performance            | - resample lpWGS VCFs<br>- resample SNP-array VCFs                                                                                                                    |             |
 
 ::end-spantable::
 

@@ -10,8 +10,13 @@ nav:
     - Pseudo-array imputation: imputation/array_imputation.md
   - Evaluation:
     - Restructure imputed data: evaluation/restructure_imputed_data.md
-    - LPS performance: evaluation/lps_performance.md
-    - PRS performance: evaluation/prs_performace.md
+    - LPS performance: 
+      - LPS evaluation: evaluation/lps_performance.md
+      - Visualization: evaluation/lps_visualization.md
+    - PRS performance: 
+      - PRS processing: evaluation/prs_processing.md
+      - PRS evaluation: evaluation/prs_performace.md
+      - Visualization: evaluation/prs_visualization.md
   - Available data: available_data.md
   - About: about.md
 repo_name: KTest-VN/lps_paper
@@ -27,6 +32,7 @@ theme:
     - content.footnote.tooltips
     - navigation.instant
     - navigation.instant.prefetch
+    - navigation.footer
   font:
     text: Roboto
     code: Roboto Mono

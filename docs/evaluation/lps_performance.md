@@ -26,7 +26,3 @@ Evaluate imputation accuracy by bin:
 ```bash
   --8<-- "evaluation/lps_evaluation/COMPUTE_accuracy_perbin.sh"
 ```
-
-## Evaluation results
-
-- Performance is evaluated against 30x WGS data.

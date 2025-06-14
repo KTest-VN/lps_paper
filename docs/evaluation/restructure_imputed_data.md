@@ -6,6 +6,9 @@
     ## Low-pass sequencing data
     ### Input data 
 
+    - lpWGS VCF files
+    - Population meta
+
     ### Merge imputed data
 
     Merge samples from imputed batches
@@ -14,14 +17,11 @@
     evaluation/merge_sample/lps/MERGE_batches.sh
     --8<--
     ```
-    ### Prepare true resident VCFs
-    ```bash
-    --8<--
-    evaluation/merge_sample/lps/VCF_true_population_slipt.sh
-    --8<--
-    ```
+    
+    - [merge_batches.sh][1]
+    - [rename_samples.sh][2]
 
-    ### Prepare imputed resident VCFS
+    ### Prepare imputed resident VCFs
     Prepare imputed VCFs being reranged by supperpopulation
     ```bash
     --8<--
@@ -29,12 +29,15 @@
     --8<--
     ```
 
-
     ### Output data
+    - restructed lpWGS VCFs
 
 === "Pseudo SNP Arrays data"
     ## Pseudo SNP Arrays data
     ### Input data
+
+    - SNP-array VCF files
+    - Population meta
 
     ### Merge imputed data
     ```bash
@@ -42,14 +45,10 @@
     evaluation/merge_sample/array/MERGE_batches.sh
     --8<--
     ```
-    ### Prepare true resident VCFs
-    ```bash
-    --8<--
-    evaluation/merge_sample/lps/VCF_true_population_slipt.sh
-    --8<--
-    ```
 
-    ### Prepare imputed resident VCFS
+    - [merge_array_batches.sh][3]
+
+    ### Prepare imputed resident VCFs
     ```bash
     --8<--
     evaluation/merge_sample/array/VCF_imputed_population_slipt.sh
@@ -57,3 +56,28 @@
     ```
 
     ### Output data
+    - restructed SNP-array VCFs
+
+=== "True VCFs"
+  
+    ## Prepare true resident VCFs
+
+    ### Input data
+    - Imputation panel
+    - Population meta
+
+    ### Processing
+
+    ```bash
+    --8<--
+    evaluation/merge_sample/lps/VCF_true_population_slipt.sh
+    --8<--
+    ```
+
+    ### Output data
+    - True VCFs being collected by supperpopulation
+
+
+[1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/merge_batches.sh
+[2]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/rename_samples.sh
+[3]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/merge_array_batches.sh

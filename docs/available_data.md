@@ -18,9 +18,9 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 |                           | Data Simulation            | - [SNP-array pos data][3][@nguyen2022comprehensive]<br>- [Samples list of batch][2]<br>- Imputation panel<br>- [GRCh38/hg38][4]<br>- [URL metadata][6]                                                                                                                    | - Pseudo array VCFs <br>- Downsampling VCFs|
 | Genotype Imputation @span | lpWGS  imputation          | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Downsampling VCFs                                               | - lpWGS VCF files        |
 |                           | SNP arrays imputation      | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Imputation panel<br>- Pseudo array VCFs | - SNP-array VCF files            |
-| Evaluation @span          | Merge imputed data         | - lpWGS VCF files<br>- SNP-array VCF files<br>- Population meta                                                                                                                    | - resample lpWGS VCFs<br>- resample SNP-array VCFs            |
-|                           | lpWGS performance          | - resample lpWGS VCFs<br>- resample SNP-array VCFs                                                                                                                    |             |
-|                           | PRS performance            | - resample lpWGS VCFs<br>- resample SNP-array VCFs                                                                                                                    |             |
+| Evaluation @span          | Restructure imputed data         | - lpWGS VCF files<br>- SNP-array VCF files<br>- Population meta<br> - Imputation panel                                                                                                                    | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs            |
+|                           | lpWGS performance          | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    |             |
+|                           | PRS performance            | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    |             |
 
 ::end-spantable::
 
@@ -31,4 +31,4 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 [4]: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/
 [6]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/meta_10_folds
 [7]: https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased
-[8]: https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/download_2504_AC_filter.sh
+[8]: https://github.com/KTest-VN/lps_paper/blob/main/support_data/2504_samples.txt

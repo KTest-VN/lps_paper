@@ -1,4 +1,4 @@
-## Acknowledging gratitude
+## Acknowledging
 
 We would like to express our sincere gratitude to [KTest Company](https://www.ktest.vn/), a biotechnology firm in Vietnam specializing in molecular biology, genetics, and bioinformatics solutions. Their generous support and valuable contributions have been instrumental in the successful completion of this research.
 

@@ -40,3 +40,7 @@ This study analyzes data from 2,504 unrelated individuals in the 1000 Genomes Pr
       - [Restructure imputed data](evaluation/restructure_imputed_data.md): Imputed data is merged by population
       - [lpWGS performance](evaluation/lps_performance.md): compared to 30x WGS to assess accuracy
       - [PRS performance](evaluation/prs_performace.md): calculate PRS and compared to 30x WGS for accessing PRS performance
+  
+## Appendix
+- [Available data](available_data.md): Information on the datasets used in this study.
+- [About](about.md): Acknowledging contributions and support.

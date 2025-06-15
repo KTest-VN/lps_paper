@@ -118,3 +118,5 @@ plugins:
       bib_file: "docs/assets/refs.bib"
       enable_inline_citations: false
   - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true

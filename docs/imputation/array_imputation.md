@@ -5,12 +5,11 @@
     - Minimac3 (version==2.0.1)
     - Minimac4 (version==1.0.3)
 
-## Input data
-
-- [Samples list of batch][2]
-- [Phasing reference][1]
-- Imputation panel
-- Pseudo array VCFs
+!!! tip "Inputs"
+    - [Samples list of batch][2]
+    - [Phasing reference][1]
+    - Imputation panel
+    - Pseudo array VCFs
 
 ## Array imputation process
 

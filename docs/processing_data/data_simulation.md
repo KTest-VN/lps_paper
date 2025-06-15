@@ -10,10 +10,10 @@
         - python>=3.11
         - pysam==0.22.0 
 
-    ### Input data
+    !!! tip "Inputs"
 
-    - [URL metadata][6]
-    - [GRCh38/hg38][7]
+        - [URL metadata][6]
+        - [GRCh38/hg38][7]
 
     ### Downsampling 
 
@@ -46,10 +46,10 @@
         - Ubuntu 22.04 (8 CPUs, 32 GB)
         - bcftools (version==1.13)
 
-    ### Input data
-    - [SNP-array pos data][3][@nguyen2022comprehensive]
-    - [Samples list of batch][2]
-    - Imputation panel
+    !!! tip "Inputs"
+        - [SNP-array pos data][3][@nguyen2022comprehensive]
+        - [Samples list of batch][2]
+        - Imputation panel
 
 
     ### Create pseudo SNP array data

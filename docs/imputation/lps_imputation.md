@@ -3,12 +3,11 @@
     - bcftools (version==1.13)
     - GLIMPSE2 v2.0.0, commit: 8ce534f, release: 2023-06-29
 
-## Input data
-
-- [Samples list of batch][4]
-- [Phasing reference][5]
-- Imputation panel
-- Downsampling VCFs
+!!! tip "Inputs"
+    - [Samples list of batch][4]
+    - [Phasing reference][5]
+    - Imputation panel
+    - Downsampling VCFs
 
 ## Low-pass imputation process
 

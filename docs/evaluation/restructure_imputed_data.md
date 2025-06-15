@@ -4,10 +4,9 @@
 
 === "Low-pass sequencing data"
     ## Low-pass sequencing data
-    ### Input data 
-
-    - lpWGS VCF files
-    - Population meta
+    !!! tip "Inputs"
+        - lpWGS VCF files
+        - Population meta
 
     ### Merge imputed data
 
@@ -34,10 +33,9 @@
 
 === "Pseudo SNP Arrays data"
     ## Pseudo SNP Arrays data
-    ### Input data
-
-    - SNP-array VCF files
-    - Population meta
+    !!! tip "Inputs"
+        - SNP-array VCF files
+        - Population meta
 
     ### Merge imputed data
     ```bash
@@ -62,9 +60,9 @@
   
     ## Prepare true resident VCFs
 
-    ### Input data
-    - Imputation panel
-    - Population meta
+    !!! tip "Inputs"
+        - Imputation panel
+        - Population meta
 
     ### Processing
 

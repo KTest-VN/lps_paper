@@ -114,6 +114,9 @@ extra_javascript:
 plugins:
   - mkdocs-jupyter:
       execute: false
+      remove_tag_config:
+              remove_input_tags:
+                  - hide_code
   - bibtex:
       bib_file: "docs/assets/refs.bib"
       enable_inline_citations: false

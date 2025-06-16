@@ -3,7 +3,7 @@
     - bcftools (version==1.13)
     - GLIMPSE2 v2.0.0, commit: 8ce534f, release: 2023-06-29
 
-!!! tip "Inputs"
+!!! input "Input data"
     - [Samples list of batch][4]
     - [Phasing reference][5]
     - Imputation panel

@@ -4,7 +4,7 @@ BATCH_NUM=$1
 CHR=$2
 ARRAY=$3
 
-## Inputs
+## Input data
 BATCH_SAMPLE_LIST=batch_${BATCH_NUM}.txt
 REFERENCE_VCF=chr${CHR}.vcf.gz
 POS_FILES=$ARRAY:chr${CHR}.txt

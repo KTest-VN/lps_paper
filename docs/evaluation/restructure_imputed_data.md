@@ -4,7 +4,7 @@
 
 === "Low-pass sequencing data"
     ## Low-pass sequencing data
-    !!! tip "Inputs"
+    !!! input "Input data"
         - lpWGS VCF files
         - Population meta
 
@@ -20,20 +20,20 @@
     - [merge_batches.sh][1]
     - [rename_samples.sh][2]
 
-    ### Prepare imputed resident VCFs
-    Prepare imputed VCFs being reranged by supperpopulation
+    ### Restruct imputed LPS VCFs
+    Imputed VCFs is restructured by supperpopulation
     ```bash
     --8<--
     evaluation/merge_sample/lps/VCF_imputed_population_slipt.sh
     --8<--
     ```
 
-    ### Output data
-    - restructed lpWGS VCFs
+    !!! output "Output data"
+        - restructed lpWGS VCFs
 
 === "Pseudo SNP Arrays data"
     ## Pseudo SNP Arrays data
-    !!! tip "Inputs"
+    !!! input "Input data"
         - SNP-array VCF files
         - Population meta
 
@@ -46,21 +46,21 @@
 
     - [merge_array_batches.sh][3]
 
-    ### Prepare imputed resident VCFs
+    ### Restruct imputed Pseudo-array VCFs
     ```bash
     --8<--
     evaluation/merge_sample/array/VCF_imputed_population_slipt.sh
     --8<--
     ```
 
-    ### Output data
-    - restructed SNP-array VCFs
+    !!! output "Output data"
+        - restructed SNP-array VCFs
 
 === "True VCFs"
   
-    ## Prepare true resident VCFs
+    ## Prepare true VCFs according supperpopulation
 
-    !!! tip "Inputs"
+    !!! input "Input data"
         - Imputation panel
         - Population meta
 
@@ -72,8 +72,8 @@
     --8<--
     ```
 
-    ### Output data
-    - True VCFs being collected by supperpopulation
+    !!! output "Output data"
+        - True VCFs being collected by supperpopulation
 
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/merge_batches.sh

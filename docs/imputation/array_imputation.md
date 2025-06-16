@@ -5,7 +5,7 @@
     - Minimac3 (version==2.0.1)
     - Minimac4 (version==1.0.3)
 
-!!! tip "Inputs"
+!!! input "Input data"
     - [Samples list of batch][2]
     - [Phasing reference][1]
     - Imputation panel

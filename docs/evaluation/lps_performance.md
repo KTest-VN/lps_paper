@@ -10,7 +10,7 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
 
 ## Evaluation process
 
-!!! tip "Inputs"
+!!! input "Input data"
     - restructed lpWGS VCFs
     - restructed SNP-array VCFs
     - True VCFs

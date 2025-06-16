@@ -1,6 +1,6 @@
 # PRS processing
 
-!!! tip "Inputs"
+!!! input "Input data"
 
 - evaluation/prs_evaluation/CORRECT_SAMPLE_NAME.sh
 - evaluation/prs_evaluation/CONCAT_VCF.sh

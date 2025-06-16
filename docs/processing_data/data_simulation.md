@@ -10,7 +10,7 @@
         - python>=3.11
         - pysam==0.22.0 
 
-    !!! tip "Inputs"
+    !!! input "Input data"
 
         - [URL metadata][6]
         - [GRCh38/hg38][7]
@@ -46,7 +46,7 @@
         - Ubuntu 22.04 (8 CPUs, 32 GB)
         - bcftools (version==1.13)
 
-    !!! tip "Inputs"
+    !!! input "Input data"
         - [SNP-array pos data][3][@nguyen2022comprehensive]
         - [Samples list of batch][2]
         - Imputation panel

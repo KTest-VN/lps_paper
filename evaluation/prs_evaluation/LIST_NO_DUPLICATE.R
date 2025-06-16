@@ -1,10 +1,17 @@
 #!/usr/bin/env Rscript
 
 args = commandArgs(trailingOnly=TRUE)
+
+if (length(args) != 2) {
+  stop("Usage: script.R <in_file> <out_file>")
+}
+
+in_file = args[1]
+out_file = args[2]
+
+
 options(stringsAsFactors = FALSE)
 require(data.table)
-in_file = "AMR-Axiom_UKB_WCSG.QC.snplist"
-out_file = "AMR-Axiom_UKB_WCSG.nodup"
 snp = fread(in_file, header = F)
 pick = snp$V1 == "."
 snp = snp[!pick,]

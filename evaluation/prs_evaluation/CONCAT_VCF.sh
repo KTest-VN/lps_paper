@@ -1,2 +1,10 @@
-bcftools concat -Oz -o AMR-Axiom_JAPONICA_concat.vcf.gz  AMR-Axiom_JAPONICA_chr21_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr22_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr19_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr17_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr15_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr20_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr18_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr16_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr13_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr12_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr11_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr10_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr8_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr3_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr7_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr6_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr1_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr5_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr2_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr9_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr4_correct_name.vcf.gz AMR-Axiom_JAPONICA_chr14_correct_name.vcf.gz
-bcftools index AMR-Axiom_JAPONICA_concat.vcf.gz
+set -ue
+
+PREFIX=$1     #PREFIX="AMR-Axiom_JAPONICA"
+VCF_FOLDER=$2    #VCF_FOLDER="/path/to/vcf_files"
+
+# List VCF_FILES
+VCF_FILES=$(ls ${VCF_FOLDER}/${PREFIX}_chr*.vcf.gz)
+
+bcftools concat -Oz -o ${PREFIX}_concat.vcf.gz ${VCF_FILES}
+bcftools index ${PREFIX}_concat.vcf.gz

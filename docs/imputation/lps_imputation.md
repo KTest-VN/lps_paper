@@ -23,7 +23,8 @@ imputation/lowpass_imputation/Bam2Vcf.sh
 --8<--
 ```
 
-## Output data
+!!! output "Output data"
+    - SNP-array VCF files
 
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/run_imputation_bam_list.sh

@@ -19,8 +19,8 @@ nav:
       - PRS processing: evaluation/prs_processing.md
       - PRS evaluation: evaluation/prs_performace.md
       - Visualization:
-        - Overall performance: evaluation/jupyter-files/03.prs_cor.ipynb
-        - Thresholds performance: evaluation/jupyter-files/04.pct_abs_dif.ipynb
+        - PGS Correlation: evaluation/jupyter-files/03.prs_cor.ipynb
+        - ADPR: evaluation/jupyter-files/04.pct_abs_dif.ipynb
   - Available data: available_data.md
   - About: about.md
 repo_name: KTest-VN/lps_paper

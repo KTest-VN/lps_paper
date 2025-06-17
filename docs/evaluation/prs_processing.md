@@ -59,5 +59,8 @@ Concat autosome VCF files have same prefix (Array name/ lowpass coverage).
 ---8<--- "evaluation/prs_evaluation/GET_PRS.sh"
 ```
 
+!!! output "Output data"
+    - [Raw PRS scores][2]
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/prs_evaluation/LIST_NO_DUPLICATE.R
+[2]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/raw_prs_scores

@@ -33,7 +33,8 @@ imputation/pseudo-array_imputation/impute_minimac4.sh
 --8<--
 ```
 
-## Output data
+!!! output "Output data"
+    - SNP-array VCF files
 
 
 

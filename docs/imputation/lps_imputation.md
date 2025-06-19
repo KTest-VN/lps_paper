@@ -15,16 +15,17 @@
 Make GLIMPSE2 imputation reference data ([gen_ref_batch.sh][2], [buid_ref.sh][3])
 
 ### Imputation process 
-Joint phasing and imputation: `GLIMPSE2` ([run_imputation_bam_list.sh][1])
 
-```bash linenums="1"
---8<--
-imputation/lowpass_imputation/Bam2Vcf.sh
---8<--
-```
+!!! code
+    ```bash linenums="1"
+    --8<--
+    imputation/lowpass_imputation/Bam2Vcf.sh
+    --8<--
+    ```
+    Imputation processing on autosomes and ligating using `GLIMPSE2` ([run_imputation_bam_list.sh][1])
 
 !!! output "Output data"
-    - SNP-array VCF files
+    - lpWGS VCF files
 
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/run_imputation_bam_list.sh

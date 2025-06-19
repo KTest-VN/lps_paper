@@ -25,7 +25,7 @@ BAM_LIST="$1"
 CHR="$2"
 OUT="$3"
 CORES="${4:-1}"  # Default to 1 if CORES is not provided
-REF_PREFIX="${5:-binary_ref}"  # Default to 'binary_ref' if REF_PREFIX is not provided
+REF_FOLDER=$5    # Default to 'binary_ref' if REF_PREFIX is not provided
 TEM_PREFIX="${OUT%%.*}"
 
 # ## test dir /mnt/ScratchProjects/Aqua-Faang/dat_projects/igsr_data/raw_data/ref
@@ -51,7 +51,7 @@ do
 	REGS=$(echo ${IRG} | cut -d":" -f 2 | cut -d"-" -f1)
 	REGE=$(echo ${IRG} | cut -d":" -f 2 | cut -d"-" -f2)
 	GLIMPSE2_phase_static --bam-list ${BAM_LIST} \
-        --reference ${REF_PREFIX}_${CHR}_${REGS}_${REGE}.bin \
+        --reference ${REF_FOLDER}/binary_ref_${CHR}_${REGS}_${REGE}.bin \
         --output ${TEM_PREFIX}_${CHR}_${REGS}_${REGE}_tempo.bcf \
         --keep-monomorphic-ref-sites \
         --threads ${CORES}

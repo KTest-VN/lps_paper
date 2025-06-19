@@ -10,23 +10,25 @@
 
     ### Merge imputed data
 
-    Merge samples from imputed batches
-    ```bash linenums="1"
-    --8<--
-    evaluation/merge_sample/lps/MERGE_batches.sh
-    --8<--
-    ```
+    !!! code
+        Merge samples from imputed batches
+        ```bash linenums="1"
+        --8<--
+        evaluation/merge_sample/lps/MERGE_batches.sh
+        --8<--
+        ```
     
-    - [merge_batches.sh][1]
-    - [rename_samples.sh][2]
+        - [merge_batches.sh][1]
+        - [rename_samples.sh][2]
 
     ### Restruct imputed LPS VCFs
-    Imputed VCFs is restructured by supperpopulation
-    ```bash linenums="1"
-    --8<--
-    evaluation/merge_sample/lps/VCF_imputed_population_slipt.sh
-    --8<--
-    ```
+    !!! code
+        Imputed VCFs is restructured by supperpopulation
+        ```bash linenums="1"
+        --8<--
+        evaluation/merge_sample/lps/VCF_imputed_population_slipt.sh
+        --8<--
+        ```
 
     !!! output "Output data"
         - restructed lpWGS VCFs
@@ -38,13 +40,14 @@
         - Population meta
 
     ### Merge imputed data
-    ```bash linenums="1"
-    --8<--
-    evaluation/merge_sample/array/MERGE_batches.sh
-    --8<--
-    ```
+    !!! code
+        ```bash linenums="1"
+        --8<--
+        evaluation/merge_sample/array/MERGE_batches.sh
+        --8<--
+        ```
 
-    - [merge_array_batches.sh][3]
+        - [merge_array_batches.sh][3]
 
     ### Restruct imputed Pseudo-array VCFs
     ```bash linenums="1"
@@ -65,12 +68,12 @@
         - Population meta
 
     ### Processing
-
-    ```bash linenums="1"
-    --8<--
-    evaluation/merge_sample/lps/VCF_true_population_slipt.sh
-    --8<--
-    ```
+    !!! code
+        ```bash linenums="1"
+        --8<--
+        evaluation/merge_sample/lps/VCF_true_population_slipt.sh
+        --8<--
+        ```
 
     !!! output "Output data"
         - True VCFs being collected by supperpopulation

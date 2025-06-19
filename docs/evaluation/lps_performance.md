@@ -15,20 +15,18 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
     - restructed SNP-array VCFs
     - True VCFs
 
+=== "Evaluate imputation by SNPs"
+    !!! code
+        ```bash  linenums="1"
+            --8<-- "evaluation/lps_evaluation/EVALUATE_imputation.sh"
+        ``` 
 
-Evaluatate imputation by SNPs: 
+        - [compute_MAF.sh](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/compute_MAF.sh)
+        - [run_evaluate.py](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/run_evaluate.py)  
 
-- [compute_MAF.sh](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/compute_MAF.sh)
-- [run_evaluate.py](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/run_evaluate.py)  
-
-```bash  linenums="1"
-  --8<-- "evaluation/lps_evaluation/EVALUATE_imputation.sh"
-``` 
-
-Evaluate imputation accuracy by bin: 
-
-- [get_coverage.py](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/get_coverage.py)  
-
-```bash linenums="1"
-  --8<-- "evaluation/lps_evaluation/COMPUTE_accuracy_perbin.sh"
-```
+=== "Evaluate imputation accuracy by bin" 
+    !!! code
+        ```bash linenums="1"
+          --8<-- "evaluation/lps_evaluation/COMPUTE_accuracy_perbin.sh"
+        ```
+        - [get_coverage.py](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/get_coverage.py)  

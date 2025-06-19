@@ -15,49 +15,56 @@
 
 Ensure that sample names do not contain underscores, as these may be introduced during the merging of imputed VCF files. In such cases, the filename used during merging may be incorporated into the sample name to maintain uniqueness across datasets.
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/CORRECT_SAMPLE_NAME.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/CORRECT_SAMPLE_NAME.sh"
+    ```
 
 ## Concate VCF files
 
 Concat autosome VCF files have same prefix (Array name/ lowpass coverage).
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/CONCAT_VCF.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/CONCAT_VCF.sh"
+    ```
 
 ## Annotate VCF files
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/ANNOTATE_VCF.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/ANNOTATE_VCF.sh"
+    ```
 
 ## Convert VCF files to BED files
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/VCF_TO_BED.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/VCF_TO_BED.sh"
+    ```
 
 ## QC VCF files
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/QC.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/QC.sh"
+    ```
 
 ## Deduplicate
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/DEDUPLICATE.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/DEDUPLICATE.sh"
+    ```
 
-- [LIST_NO_DUPLICATE.R][1]
+    - [LIST_NO_DUPLICATE.R][1]
 
 ## Get PRS score
 
-```bash linenums="1"
----8<--- "evaluation/prs_evaluation/GET_PRS.sh"
-```
+!!! code
+    ```bash linenums="1"
+    ---8<--- "evaluation/prs_evaluation/GET_PRS.sh"
+    ```
 
 !!! output "Output data"
     - [Raw PRS scores][2]

@@ -11,27 +11,27 @@
     - Imputation panel
     - Pseudo array VCFs
 
-## Array imputation process
-
-!!! info
-    Use binaries being in the [binary folder][4].
-
 ### Prepare imputation reference
 
-```bash linenums="1"
---8<--
-imputation/pseudo-array_imputation/_prepare_ref.sh
---8<--
-```
-[rename_chr.txt][5] was used to convert to chromosome numeric format.
+!!! code
+    This script extracts a reference panel, phases pseudo SNP array data using Shapeit5, and prepares the reference for imputation by indexing it in Minimac3 format
+
+    ```bash linenums="1"
+    --8<--
+    imputation/pseudo-array_imputation/_prepare_ref.sh
+    --8<--
+    ```
+    [rename_chr.txt][5] was used to convert to chromosome numeric format. 
 
 ### Imputation process 
 
-```bash linenums="1"
---8<--
-imputation/pseudo-array_imputation/impute_minimac4.sh
---8<--
-```
+!!! code
+    Genotype imputation is performed using Minimac4. The phased BCF file is converted and indexed, imputed against a reference panel, and temporary files are removed upon completion.
+    ```bash linenums="1"
+    --8<--
+    imputation/pseudo-array_imputation/impute_minimac4.sh
+    --8<--
+    ```
 
 !!! output "Output data"
     - SNP-array VCF files

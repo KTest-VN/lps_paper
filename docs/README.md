@@ -1,6 +1,6 @@
 # Polygenic score and imputation accuracy from low-pass sequencing in diverse population
 
-This website provides comprehensive information on the code, data, and methods used in the article.
+This documentation provides comprehensive information on the code, data, and methods used in the article.
 
 ## Study Summary: Comparing Genotyping Arrays and Low-Pass WGS
 
@@ -9,12 +9,12 @@ Traditional GWAS and PGS studies use SNP arrays with genotype imputation, but **
 ### Study Design
 - **Compared**: 8 genotyping arrays vs. 6 lpWGS coverage levels (0.5× to 2×)
 - **Population**: 2,504 individuals from the 1000 Genomes Project
-- **Traits**: 4 complex traits analyzed using 10-fold cross-imputation
+- **Methods**: Applied 10-fold cross-validation to perform genotype imputation and evaluate polygenic scores (PGS) across 4 traits. Results were summarized and assessed for performance.
 
 ### Key Findings
-- **lpWGS matches** population-optimized arrays in imputation and PGS accuracy
-- **Outperforms arrays** in underrepresented populations
-- **Superior for rare and low-frequency variants**
+- lpWGS matches population-optimized arrays in imputation and PGS accuracy
+- Outperforms arrays in underrepresented populations
+- Superior for rare and low-frequency variants
 
 ### Conclusion
 Low-pass WGS is a **flexible and powerful alternative** to genotyping arrays, especially valuable for studies involving **diverse or underrepresented populations**.
@@ -41,7 +41,7 @@ This study analyzes data from 2,504 unrelated individuals in the 1000 Genomes Pr
 1. Processing data:
       - [Cross-Validation Framework](processing_data/cross_validation.md): A 10-fold stratified cross-validation ensures balanced population representation for imputation testing.
       - [Variant Filtering](processing_data/variant_filtering.md): VCF files are filtered to improve imputation accuracy.
-      - [Data Simulation](processing_data/data_simulation.md): Low-pass sequencing and eight SNP arrays are simulated with realistic noise and aligned to hg38.
+      - [Data Simulation](processing_data/data_simulation.md): Low-pass sequencing and eight SNP arrays data are simulated from high-coverage data.
 2. Genotype Imputation: 
       - [lpWGS](imputation/lps_imputation.md): GLIMPSE2 is used for lpWGS imputation.
       - [SNP arrays](imputation/array_imputation.md): undergo phasing with SHAPEIT5 and imputation with Minimac4.

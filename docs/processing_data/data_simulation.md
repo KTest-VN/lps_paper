@@ -16,13 +16,15 @@
         - [GRCh38/hg38][7]
 
     ### Downsampling 
+    ???+ code
+        CRAM files is automatically downloaded, its integrity verified via MD5 checksum, converted to BAM format, downsampled to multiple sequencing depths (0.5× to 2.0×), and indexed—while intermediate files are removed to efficiently manage disk space.
 
-    ```bash linenums="1"
-    --8<--
-    imputation/lowpass_imputation/Sample2Bam.sh
-    --8<--
-    ```
-    [bam_sampling.py][4] was used to downsampling bam files.
+        ```bash linenums="1"
+        --8<--
+        imputation/lowpass_imputation/Sample2Bam.sh
+        --8<--
+        ```
+        [bam_sampling.py][4] was used to downsampling bam files.
 
 === "Pseudo SNP Arrays data"
     ## Pseudo SNP Arrays data
@@ -54,13 +56,14 @@
 
     ### Create pseudo SNP array data
 
-
-    ```bash linenums="1"
-    --8<--
-    imputation/pseudo-array_imputation/_prepare_pseudo.sh
-    --8<--
-    ```
-    [get_pseudo_array.sh][5] filters variants from a VCF using a region list, converts phased genotypes to unphased format, and outputs a bgzipped VCF file.
+    ???+ code
+        Pseudo SNP array data is created by first extracting a subset of samples from a reference VCF file, renaming chromosomes, and indexing the result. Then, a region-based filter is applied using a position list, phased genotypes are converted to unphased format, and the output is saved as a bgzipped VCF file.
+        ```bash linenums="1"
+        --8<--
+        imputation/pseudo-array_imputation/_prepare_pseudo.sh
+        --8<--
+        ```
+        [get_pseudo_array.sh][5] filters variants from a VCF using a region list, converts phased genotypes to unphased format, and outputs a bgzipped VCF file.
 
 
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list

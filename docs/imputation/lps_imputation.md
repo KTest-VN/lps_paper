@@ -12,7 +12,13 @@
 ## Low-pass imputation process
 
 ### Prepare imputation reference
-Make GLIMPSE2 imputation reference data ([gen_ref_batch.sh][2], [buid_ref.sh][3])
+
+!!! code
+    Make GLIMPSE2 imputation reference data
+    ```bash linenums="1"
+    --8<-- "imputation/lowpass_imputation/bin/gen_ref_batch.sh"
+    ```
+    [build_ref.sh][3] splices raw reference panels (VCF files) to prepare the imputation panel for the GLIMPSE2 imputation process (bin files). 
 
 ### Imputation process 
 

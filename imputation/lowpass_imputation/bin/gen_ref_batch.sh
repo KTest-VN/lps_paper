@@ -1,6 +1,11 @@
+set -ue
 
-## set up tools
-export PATH="$PWD/bin:$PATH"
+## INPUT
+BATCH=$1                # e.g. 1, 2, ..., 10
+REF_FOLDER=$2           # e.g. /path/to/reference_panel_folder
+OUT_DIR=$3              # e.g. /path/to/output_directory
+SAMPLE_LIST=$4          # e.g. /path/to/sample_list.txt
+MAP_DIR=$5              # e.g. /path/to/map_directory
 
 
 gen_ref_batch_chr(){
@@ -13,32 +18,19 @@ gen_ref_batch_chr(){
     mkdir -p $out_dir
 
     echo filtering reference of ${chr}
-	bcftools="singularity run -B /home/ktest:/home/ktest /home/ktest/pipeline_env/software/container/us-central1-docker.pkg.dev-ktest-kite-ktest-bcftools-b812975.img bcftools"
 	
-    $bcftools view \
+    bcftools view \
         -S ^$sample_list ${in_dir}/chr${i}.vcf.gz  \
         -Oz -o ${out_dir}/chr${i}.vcf.gz
     
-    $bcftools index -f ${out_dir}/chr${i}.vcf.gz
+    bcftools index -f ${out_dir}/chr${i}.vcf.gz
 
-    bin/buid_ref.sh ${out_dir}/chr${i}.vcf.gz ${chr} ${map_dir}/${chr}.b38.gmap.gz ${out_dir}
+    bash buid_ref.sh ${out_dir}/chr${i}.vcf.gz ${chr} ${map_dir}/${chr}.b38.gmap.gz ${out_dir}
 }
-
-
-BATCH=9
-
-## 
-in_dir=/home/ktest/project/truongphi/PRS/PRS-21/PRS-173/lps_imputation/aDat_ac_filtered
-save_folder="/home/ktest/share/PRS/PRS-173"
-
-out_dir=$PWD/batch_${BATCH}_ref
-sample_list=$PWD/data/sample_list/batch_${BATCH}.txt
-map_dir=$PWD/maps
-##
 
 for i in {1..22}
 do
-    gen_ref_batch_chr chr${i} $in_dir $out_dir $sample_list $map_dir &
+    gen_ref_batch_chr chr${i} $REF_FOLDER $OUT_DIR $SAMPLE_LIST $MAP_DIR &
 done
 
 wait

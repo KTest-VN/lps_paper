@@ -27,26 +27,14 @@ OUT_DIR="$4"
 CORES="${5:-1}"  # Default to 1 if CORES is not provided
 REF_PREFIX="${6:-binary_ref}"  # Default to 'binary_ref' if REF_PREFIX is not provided
 
-# ## test dir /mnt/ScratchProjects/Aqua-Faang/dat_projects/igsr_data/raw_data/ref
-# # export PATH="$PWD/bin:$PATH"
-# VCF=ref_chr22.vcf.gz
-# CHR=chr22
-# MAP=maps/chr22.b38.gmap.gz
-# OUT_DIR=chr22_test
-# CORES=4
-# REF_PREFIX='binary_ref'
-
 mkdir -p ${OUT_DIR}
 
-bcftools="singularity run -B /home:/home /home/ktest/pipeline_env/software/container/us-central1-docker.pkg.dev-ktest-kite-ktest-bcftools-b812975.img bcftools"
-glimpse_env="singularity run -B /home:/home us-central1-docker.pkg.dev/ktest-kite/ktest/glimpse2:0529020.imp"
-
 ## extract sites
-$bcftools view -G -Oz -o ${OUT_DIR}/${CHR}.sites.vcf.gz ${VCF}
-$bcftools index -f ${OUT_DIR}/${CHR}.sites.vcf.gz
+bcftools view -G -Oz -o ${OUT_DIR}/${CHR}.sites.vcf.gz ${VCF}
+bcftools index -f ${OUT_DIR}/${CHR}.sites.vcf.gz
 
 ## slipt chunks
-$glimpse_env GLIMPSE2_chunk --input ${OUT_DIR}/${CHR}.sites.vcf.gz \
+GLIMPSE2_chunk --input ${OUT_DIR}/${CHR}.sites.vcf.gz \
     --region ${CHR} \
     --window-cm 8 \
     --window-mb 10 \
@@ -66,7 +54,7 @@ do
     IRG=$(echo $LINE | cut -d" " -f3)
     ORG=$(echo $LINE | cut -d" " -f4)
 
-    $glimpse_env GLIMPSE2_split_reference --threads $CORES \
+    GLIMPSE2_split_reference --threads $CORES \
         --reference ${VCF} \
         --map ${MAP} \
         --input-region ${IRG} \

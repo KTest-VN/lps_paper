@@ -11,6 +11,9 @@
     - restructed SNP-array VCFs
     - True VCFs
 
+??? info "PRS processing workflow"
+    ![](../assets/img/PRS-workflow.png)
+
 ## Correct sample name
 
 Ensure that sample names do not contain underscores, as these may be introduced during the merging of imputed VCF files. In such cases, the filename used during merging may be incorporated into the sample name to maintain uniqueness across datasets.

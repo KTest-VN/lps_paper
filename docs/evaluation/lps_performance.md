@@ -21,12 +21,18 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
             --8<-- "evaluation/lps_evaluation/EVALUATE_imputation.sh"
         ``` 
 
-        - [compute_MAF.sh](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/compute_MAF.sh)
-        - [run_evaluate.py](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/run_evaluate.py)  
+        - [compute_MAF.sh][1]: Retrive MAF values from true VCF files
+        - [run_evaluate.py][2]: Evaluation using SNP-wise matrix 
 
 === "Evaluate imputation accuracy by bin" 
     !!! code
         ```bash linenums="1"
           --8<-- "evaluation/lps_evaluation/COMPUTE_accuracy_perbin.sh"
         ```
-        - [get_coverage.py](https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/get_coverage.py)  
+        
+        - [get_coverage.py][3]: Evaluation using Imputation coverage matrix  
+
+
+[1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/compute_MAF.sh
+[2]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/run_evaluate.py
+[3]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/get_coverage.py

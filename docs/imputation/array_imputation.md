@@ -11,6 +11,9 @@
     - Imputation panel
     - Pseudo array VCFs
 
+??? info "Array imputation workflow"
+    ![](../assets/img/pseudo-array-workflow.png)
+
 ### Prepare imputation reference
 
 !!! code

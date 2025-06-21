@@ -21,7 +21,7 @@ These evaluations were conducted across multiple **p-value thresholds** to ensur
     - $M$ : number of SNPs after clumping
     - $x_{ij}$ : allele count for SNP $j$ in individual $i$
     - $\hat{\beta}_j$ : marginal effect size from GWAS for SNP $j$
-    - $𝟙_{\{P_j < P_T\}}$ : indicator function for p-value filtering
+    - $1_{\{P_j < P_T\}}$ : indicator function for p-value filtering
 
 === "PGS correlation"
     ## PGS correlation

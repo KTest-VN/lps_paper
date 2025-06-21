@@ -11,6 +11,9 @@
 
 ## Low-pass imputation process
 
+??? info "Low-pass imputation workflow"
+    ![](../assets/img/glimpse-workflow.png)
+
 ### Prepare imputation reference
 
 !!! code

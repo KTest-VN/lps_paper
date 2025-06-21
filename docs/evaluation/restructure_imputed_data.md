@@ -2,11 +2,12 @@
     - Ubuntu 22.04 (8 CPUs, 32 GB)
     - bcftools (version==1.13)
 
+
 === "Low-pass sequencing data"
     ## Low-pass sequencing data
     !!! input "Input data"
         - lpWGS VCF files
-        - Population meta
+        - [Population meta][4]
 
     ### Merge imputed data
 
@@ -37,7 +38,7 @@
     ## Pseudo SNP Arrays data
     !!! input "Input data"
         - SNP-array VCF files
-        - Population meta
+        - [Population meta][4]
 
     ### Merge imputed data
     !!! code
@@ -50,11 +51,12 @@
         - [merge_array_batches.sh][3]
 
     ### Restruct imputed Pseudo-array VCFs
-    ```bash linenums="1"
-    --8<--
-    evaluation/merge_sample/array/VCF_imputed_population_slipt.sh
-    --8<--
-    ```
+    !!! code
+        ```bash linenums="1"
+        --8<--
+        evaluation/merge_sample/array/VCF_imputed_population_slipt.sh
+        --8<--
+        ```
 
     !!! output "Output data"
         - restructed SNP-array VCFs
@@ -65,7 +67,7 @@
 
     !!! input "Input data"
         - Imputation panel
-        - Population meta
+        - [Population meta][4]
 
     ### Processing
     !!! code
@@ -82,3 +84,4 @@
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/merge_batches.sh
 [2]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/rename_samples.sh
 [3]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/merge_sample/bin/merge_array_batches.sh
+[4]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/2504_infos.tsv

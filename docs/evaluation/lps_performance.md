@@ -32,7 +32,18 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
         
         - [get_coverage.py][3]: Evaluation using Imputation coverage matrix  
 
+!!! output
+    Evaluation process output:
+    
+    |                     | LPS                  | Pseudo array           |
+    |:--------------------|:---------------------|:-----------------------|
+    | SNP-wise accuracy   | [lps_all_acc.txt][6] | [array_all_acc.txt][4] |
+    | Imputation accuracy | [lps_all_cov.txt][7] | [array_all_cov.txt][5] |
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/compute_MAF.sh
 [2]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/run_evaluate.py
 [3]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/get_coverage.py
+[4]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/downstream/data/raw_snpwise_accuracy/array_all_acc.txt
+[5]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/downstream/data/raw_snpwise_accuracy/array_all_cov.txt
+[6]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/downstream/data/raw_snpwise_accuracy/lps_all_acc.txt
+[7]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/downstream/data/raw_snpwise_accuracy/lps_all_cov.txt

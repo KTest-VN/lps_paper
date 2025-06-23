@@ -10,3 +10,5 @@ evaluation/downstream/out_figs/.ipynb_checkpoints
 evaluation/downstream/out_tables/.ipynb_checkpoints
 evaluation/downstream/out_tables/mean_r2_summary_*
 evaluation/downstream/out_figs/acc.pdf
+evaluation/downstream/out_figs/cov.pdf
+evaluation/downstream/out_tables/coverage_summary_*

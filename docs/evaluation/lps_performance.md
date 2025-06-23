@@ -15,7 +15,7 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
     - restructed SNP-array VCFs
     - True VCFs
 
-=== "Evaluate imputation by SNPs"
+=== "Imputation Accuracy"
     !!! code
         ```bash  linenums="1"
             --8<-- "evaluation/lps_evaluation/EVALUATE_imputation.sh"
@@ -24,7 +24,7 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
         - [compute_MAF.sh][1]: Retrive MAF values from true VCF files
         - [run_evaluate.py][2]: Evaluation using SNP-wise matrix 
 
-=== "Evaluate imputation accuracy by bin" 
+=== "Imputation coverage" 
     !!! code
         ```bash linenums="1"
           --8<-- "evaluation/lps_evaluation/COMPUTE_accuracy_perbin.sh"

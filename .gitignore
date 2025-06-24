@@ -13,3 +13,7 @@ evaluation/downstream/out_tables/coverage/coverage_summary_*
 evaluation/downstream/out_figs/acc.pdf
 evaluation/downstream/out_figs/cov.pdf
 evaluation/downstream/out_tables/coverage_summary_*
+
+# Ignore specific output files from PRS processing
+evaluation/downstream/out_figs/prs_corelation.pdf
+evaluation/downstream/out_tables/prs_cor/prs_correlation_*.csv

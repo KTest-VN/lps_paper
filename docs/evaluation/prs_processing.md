@@ -23,9 +23,9 @@ Ensure that sample names do not contain underscores, as these may be introduced 
     ---8<--- "evaluation/prs_evaluation/CORRECT_SAMPLE_NAME.sh"
     ```
 
-## Concate VCF files
+## Concatenate VCF files
 
-Concat autosome VCF files have same prefix (Array name/ lowpass coverage).
+Concatenate autosome VCF files have same prefix (Array name/ lowpass coverage).
 
 !!! code
     ```bash linenums="1"
@@ -62,15 +62,24 @@ Concat autosome VCF files have same prefix (Array name/ lowpass coverage).
 
     - [LIST_NO_DUPLICATE.R][1]
 
-## Get PRS score
+## Get raw PRS score
 
 !!! code
     ```bash linenums="1"
     ---8<--- "evaluation/prs_evaluation/GET_PRS.sh"
     ```
 
+## Prepare percentile PRS scores
+!!! code
+    ```bash linenums="1"
+    ...
+    ```
+
 !!! output "Output data"
     - [Raw PRS scores][2]
+    - [Percentile PRS scores][3]
+
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/prs_evaluation/LIST_NO_DUPLICATE.R
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/raw_prs_scores
+[3]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/process_prs_scores

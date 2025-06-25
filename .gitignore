@@ -5,6 +5,7 @@ evaluation/downstream/data/raw_snpwise_accuracy/lps/*
 .cache
 docs/evaluation/jupyter-files/.ipynb_checkpoints
 evaluation/downstream/out_figs/.ipynb_checkpoints
+evaluation/downstream/data/.ipynb_checkpoints
 
 # Ignore Jupyter Notebook output files
 evaluation/downstream/out_tables/.ipynb_checkpoints

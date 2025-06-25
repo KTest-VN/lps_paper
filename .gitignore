@@ -17,3 +17,6 @@ evaluation/downstream/out_tables/coverage_summary_*
 # Ignore specific output files from PRS processing
 evaluation/downstream/out_figs/prs_corelation.pdf
 evaluation/downstream/out_tables/prs_cor/prs_correlation_*.csv
+
+evaluation/downstream/out_figs/prs_ADPR/Pt_*.pdf
+evaluation/downstream/out_tables/prs_percentile/prs_ADPR*.csv

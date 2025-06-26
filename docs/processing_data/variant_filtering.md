@@ -14,7 +14,7 @@ From 1000 Genome Project, we download high-coverage (30X) VCF files containing 3
 !!! warning
     Be sure to {==verify the MD5 checksums of the VCF files==}. Due to their large size, file transfers may be prone to interruption or corruption during transmission.
 
-??? code
+!!! code
     Code was used to download VCF files containing 3202 samples.
     ```bash linenums="1"
     --8<-- "processing_data/download_total_vcf.sh"
@@ -26,7 +26,7 @@ From 1000 Genome Project, we download high-coverage (30X) VCF files containing 3
 
 VCF files were filtered to retain only bi-allelic SNPs with an allele count ≥ 2 to reduce noise in imputation and evaluation.
 
-??? code
+!!! code
     ```bash linenums="1"
     --8<-- "processing_data/filter_variants.sh"
     ```

@@ -1,3 +1,5 @@
+After the imputation process, the data must be stratified by the five superpopulations (EUR, EAS, AMR, AFR, SAS) to enable population-specific evaluation.
+
 !!! abstract "Requirements"
     - Ubuntu 22.04 (8 CPUs, 32 GB)
     - bcftools (version==1.13)
@@ -64,6 +66,8 @@
 === "True VCFs"
   
     ## Prepare true VCFs according supperpopulation
+
+    Preparation of true VCFs involves extracting the corresponding samples from the reference panel for each of the five superpopulations.
 
     !!! input "Input data"
         - Imputation panel

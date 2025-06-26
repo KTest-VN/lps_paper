@@ -20,7 +20,7 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 |                           | [SNP arrays imputation](imputation/array_imputation.md)      | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Raw imputation panel<br>- Pseudo array VCFs | - SNP-array VCF files            |
 | Evaluation @span          | [Restructure imputed data](evaluation/restructure_imputed_data.md)         | - lpWGS VCF files<br>- SNP-array VCF files<br>- [Population meta][10]<br> - Raw imputation panel                                                                                                                    | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs            |
 |                           | [lpWGS performance](evaluation/lps_performance.md)          | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [LPS-arrays evaluation output][11]            |
-|                           | [PRS performance](evaluation/prs_performace.md)            | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [Raw PRS scores][9]<br>- [Percentile PRS scores][12]            |
+|                           | [PRS performance](evaluation/prs_performace.md)            | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [Raw PRS scores][9]<br>- [Percentile PRS scores][12]<br>- [Visualized figures][13]<br>- [Visualized tables][14]           |
 
 ::end-spantable::
 
@@ -36,3 +36,5 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 [10]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/2504_infos.tsv
 [11]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/raw_snpwise_accuracy
 [12]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/process_prs_scores
+[13]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_figs 
+[14]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_tables 

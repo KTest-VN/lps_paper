@@ -12,9 +12,9 @@ Traditional GWAS and PGS studies use SNP arrays with genotype imputation, but **
 - **Methods**: Applied 10-fold cross-validation to perform genotype imputation and evaluate polygenic scores (PGS) across 4 traits. Results were summarized and assessed for performance.
 
 ### Key Findings
-- lpWGS matches population-optimized arrays in imputation and PGS accuracy
-- Outperforms arrays in underrepresented populations
-- Superior for rare and low-frequency variants
+- lpWGS matched population-optimized arrays in imputation and PGS accuracy
+- lpWGS outperformed arrays in underrepresented populations
+- lpWGS was superior for rare and low-frequency variants
 
 ### Conclusion
 Low-pass WGS is a **flexible and powerful alternative** to genotyping arrays, especially valuable for studies involving **diverse or underrepresented populations**.

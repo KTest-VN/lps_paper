@@ -21,8 +21,8 @@ To assess imputation performance, two key metrics are used: {==Imputation Accura
             --8<-- "evaluation/lps_evaluation/EVALUATE_imputation.sh"
         ``` 
 
-        - [compute_MAF.sh][1]: Retrive MAF values from true VCF files
-        - [run_evaluate.py][2]: Evaluation using SNP-wise matrix 
+        - [compute_MAF.sh][1]: Retrieve MAF values from true VCF files
+        - [run_evaluate.py][2]: Evaluation by using SNP-wise matrix 
 
 === "Imputation coverage" 
     !!! code

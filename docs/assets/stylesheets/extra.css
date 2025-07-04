@@ -8,10 +8,6 @@
   line-height: 1.5;      /* Tighter line spacing within each item */
 }
 
-.md-grid {              /* Wider middle column of pages*/
-  max-width: 73.5%; 
-}
-
 .md-typeset .tabbed-set {
   border: 0.5px solid var(--md-typeset-table-color);
 }
@@ -81,6 +77,7 @@
           mask-image: var(--md-admonition-icon--code);
 }
 
+/* Heading styles */
 .md-typeset h1 {
   font-weight: 600;
 }

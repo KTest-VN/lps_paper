@@ -18,9 +18,9 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 |                           | [Data Simulation](processing_data/data_simulation.md)            | - [SNP-array pos data][3][@nguyen2022comprehensive]<br>- [Samples list of batch][2]<br>- Raw imputation panel<br>- [GRCh38/hg38][4]<br>- [URL metadata][6]                                                                                                                    | - Pseudo array VCFs <br>- Downsampling VCFs|
 | Genotype Imputation @span | [lpWGS  imputation](imputation/lps_imputation.md)          | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Raw imputation panel<br>- Downsampling VCFs                                               | - lpWGS VCF files        |
 |                           | [SNP arrays imputation](imputation/array_imputation.md)      | - [Samples list of batch][2]<br>- [Phasing reference][1]<br>- Raw imputation panel<br>- Pseudo array VCFs | - SNP-array VCF files            |
-| Evaluation @span          | [Restructure imputed data](evaluation/restructure_imputed_data.md)         | - lpWGS VCF files<br>- SNP-array VCF files<br>- [Population meta][10]<br> - Raw imputation panel                                                                                                                    | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs            |
-|                           | [lpWGS performance](evaluation/lps_performance.md)          | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [LPS-arrays evaluation output][11]            |
-|                           | [PRS performance](evaluation/prs_performace.md)            | - restructed lpWGS VCFs<br>- restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [Raw PRS scores][9]<br>- [Percentile PRS scores][12]<br>- [Visualized figures][13]<br>- [Visualized tables][14]           |
+| Evaluation @span          | [Restructure imputed data](evaluation/restructure_imputed_data.md)         | - lpWGS VCF files<br>- SNP-array VCF files<br>- [Population meta][10]<br> - Raw imputation panel                                                                                                                    | - Restructed lpWGS VCFs<br>- Restructed SNP-array VCFs<br>- True VCFs            |
+|                           | [lpWGS performance](evaluation/lps_performance.md)          | - Restructed lpWGS VCFs<br>- Restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [LPS-arrays evaluation output][11]<br>- [LPS visualizing figures][15]<br>- [LPS visualizing tables][16]           |
+|                           | [PRS performance](evaluation/prs_performace.md)            | - Restructed lpWGS VCFs<br>- Restructed SNP-array VCFs<br>- True VCFs                                                                                                                    | - [Raw PRS scores][9]<br>- [Percentile PRS scores][12]<br>- [PRS visualizing figures][13]<br>- [PRS visualizing tables][14]           |
 
 ::end-spantable::
 
@@ -36,5 +36,7 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 [10]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/2504_infos.tsv
 [11]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/raw_snpwise_accuracy
 [12]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/process_prs_scores
-[13]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_figs 
-[14]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_tables 
+[13]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_figs/prs_performance
+[14]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_tables/prs_performance
+[15]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_figs/lps_performance
+[16]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/out_tables/lps_performance

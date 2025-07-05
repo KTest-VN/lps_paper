@@ -10,6 +10,9 @@
     - restructed lpWGS VCFs
     - restructed SNP-array VCFs
     - True VCFs
+    - Base sumstats
+
+The PRS processing scripts were developed with reference to the tutorial provided by Choi et al.[@choi2020tutorial] , which served as a foundational guide.
 
 ??? info "PRS processing workflow"
     ![](../assets/img/PRS-workflow.png)

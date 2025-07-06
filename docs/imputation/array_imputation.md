@@ -9,7 +9,7 @@
     - [Samples list of batch][2]
     - [Phasing reference][1]
     - Imputation panel
-    - Pseudo array VCFs
+    - Pseudo-array VCFs
 
 ??? info "Array imputation workflow"
     ![](../assets/img/pseudo-array-workflow.png)

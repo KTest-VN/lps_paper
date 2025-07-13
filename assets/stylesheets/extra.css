@@ -82,3 +82,7 @@
   font-weight: 600;
 }
 
+/* Hide input and output prompts in JupyterLab */
+.jp-InputPrompt, .jp-OutputPrompt {
+    display: none !important;
+}

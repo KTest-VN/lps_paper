@@ -42,11 +42,11 @@ theme:
     text: Roboto
     code: Roboto Mono
   palette:
-    - media: "(prefers-color-scheme)"
+    - media: "(prefers-color-scheme: light)"
       toggle:
         icon: material/link
         name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: dark)"
       scheme: default
       primary: indigo
       accent: indigo

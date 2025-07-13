@@ -103,6 +103,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.magiclink
 
 extra_css:
   - assets/stylesheets/extra.css

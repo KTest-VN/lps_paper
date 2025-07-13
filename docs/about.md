@@ -4,19 +4,16 @@ We would like to express our sincere gratitude to [KTest Company](https://www.kt
 
 ## Authors
 
-| Name           | Affiliation            | Email               | ORCID                                     |
-|----------------|------------------------|---------------------|-------------------------------------------|
-| Author A       | Institution A          | authora@example.com | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) |
-| Author B       | Institution B          | authorb@example.com | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) |
-| Author C[^1]   | Institution C          | authorc@example.com | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) |
-| Author D       | Institution D          | authord@example.com | [0000-0000-0000-0000](https://orcid.org/0000-0000-0000-0000) |
+| Name       | Affiliation                              | Email | ORCID                                                        |
+|------------|-------------------------------------|-----|--------------------------------------------------------------|
+| Phi Truong           | KTest Vietnam, Ho Chi Minh City, Vietnam |   | [0009-0008-5543-7660](https://orcid.org/0009-0008-5543-7660) |
+| Thuy Vy Nguyen       | Department of Genetics, Faculty of Biology and Biotechnology, University of Science, VNUHCM, Ho Chi Minh City, Vietnam                           |  | [0000-0002-0893-740X](https://orcid.org/0000-0002-0893-740X) |
+| Dat Thanh Nguyen[^1] | - Centre for Integrative Genetics, Faculty of Biosciences, Norwegian University of Life Sciences, ˚As, Norway <br> - Center for Precision Psychiatry, Division of Mental Health and Addiction, University of Oslo, Oslo, Norway       | n.dat@outlook.com   | [0000-0003-3852-9578](https://orcid.org/0000-0003-3852-9578) |
+| Thuy Duong Ho Huynh[^1]       | KTest Vietnam, Ho Chi Minh City, Vietnam     |  duongho@ktest.vn     |  |
 
 
 [^1]:  :man_raising_hand: Corresponding author
 
 ## Contact Us
 
-For any inquiries regarding this research, please contact the corresponding author:
-
-Author C
-Email: [example@email.com]
+For any inquiries regarding this research, please contact the corresponding authors.

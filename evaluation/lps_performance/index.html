@@ -1079,7 +1079,9 @@
 
 <h2 id="evaluation-methods">Evaluation methods<a class="headerlink" href="#evaluation-methods" title="Permanent link">&para;</a></h2>
 <p><a class="glightbox" href="../../assets/img/evaluate_methods.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="evaluate methods" src="../../assets/img/evaluate_methods.png" /></a></p>
-<p>To assess imputation performance, two key metrics are used: <mark class="critic">Imputation Accuracy</mark> and <mark class="critic">Imputation Coverage</mark>. These metrics quantify the quality and completeness of imputed genetic variants, and are calculated per chromosome across all autosomes.</p>
+<p>To evaluate imputation performance, we employed two primary metrics: Imputation Accuracy and Imputation Coverage. </p>
+<p><mark class="critic">Imputation accuracy</mark> was quantified using the <ins>SNP-wise Pearson correlation</ins> (<span class="arithmatex">\(r^2\)</span>) between imputed and true genotypes, whereas <mark class="critic">Imputation coverage</mark> was defined as the proportion of variants within each minor allele frequency (MAF) bin achieving <span class="arithmatex">\(r^2\ge0.8\)</span>. </p>
+<p>These metrics collectively assess both the reliability and completeness of imputed genetic data and were calculated on a per-chromosome basis across all autosomes. Our evaluation framework follows the methodology described in Nguyen et al., 2022<sup id="fnref:nguyen2022comprehensive"><a class="footnote-ref" href="#fn:nguyen2022comprehensive">1</a></sup> </p>
 <table>
 <thead>
 <tr>
@@ -1091,7 +1093,7 @@
 <tbody>
 <tr>
 <td><strong>Imputation Accuracy</strong></td>
-<td>Mean <span class="arithmatex">\(r^2\)</span> of sites within a bin</td>
+<td>Mean <span class="arithmatex">\(r^2\)</span> of sites within a MAF bin</td>
 <td>Measures how well imputed values match true genotypes</td>
 </tr>
 <tr>
@@ -1174,6 +1176,14 @@
 </tbody>
 </table>
 </div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:nguyen2022comprehensive">
+<p>Dat Thanh Nguyen, Trang TH Tran, Mai Hoang Tran, Khai Tran, Duy Pham, Nguyen Thuy Duong, Quan Nguyen, and Nam S Vo. A comprehensive evaluation of polygenic score and genotype imputation performances of human snp arrays in diverse populations. <em>Scientific Reports</em>, 12(1):17556, 2022.&#160;<a class="footnote-backref" href="#fnref:nguyen2022comprehensive" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1196,7 +1206,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 3, 2025 15:37:17 UTC">July 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 15, 2025 10:20:28 UTC">July 15, 2025</span>
   </span>
 
     

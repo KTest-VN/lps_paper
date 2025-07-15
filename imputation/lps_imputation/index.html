@@ -1116,8 +1116,8 @@
 <div class="admonition input">
 <p class="admonition-title">Input data</p>
 <ul>
-<li><a href="https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps">Samples list of batch</a></li>
-<li><a href="https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list">Phasing reference</a></li>
+<li><a href="https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list">Samples list of batch</a></li>
+<li><a href="https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps">Phasing reference</a></li>
 <li>Imputation panel</li>
 <li>Downsampled BAM</li>
 </ul>
@@ -1125,12 +1125,13 @@
 <h2 id="low-pass-imputation-process">Low-pass imputation process<a class="headerlink" href="#low-pass-imputation-process" title="Permanent link">&para;</a></h2>
 <details class="info">
 <summary>Low-pass imputation workflow</summary>
-<p><a class="glightbox" href="../../assets/img/glimpse-workflow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/img/glimpse-workflow.png" /></a></p>
+<p><a class="glightbox" href="../../assets/img/glimpse-workflow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/img/glimpse-workflow.png" /></a>
+The imputation reference panel (Ref VCF) was indexed using <strong>GLIMPSE2</strong> and subsequently processed through the <em>chunking</em> and <em>split_reference</em> steps to generate the appropriate binary input format. The prepared reference panel was then employed to impute genotype data from downsampled BAM files using <strong>GLIMPSE2_phase</strong> modules. Finally, imputed genomic chunks were merged via <strong>GLIMPSE_ligate</strong> to produce the final VCF outputs.</p>
 </details>
 <h3 id="prepare-imputation-reference">Prepare imputation reference<a class="headerlink" href="#prepare-imputation-reference" title="Permanent link">&para;</a></h3>
 <div class="admonition code">
 <p class="admonition-title">Code</p>
-<p>Make GLIMPSE2 imputation reference data
+<p>Creating imputation reference by using <a href="https://odelaneau.github.io/GLIMPSE/docs/documentation/chunk/">GLIMPSE2_chunk</a> and <a href="https://odelaneau.github.io/GLIMPSE/docs/documentation/split_reference/">GLIMPSE2_split_reference</a>.
 <div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1203,7 +1204,7 @@
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>
 </span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="nb">wait</span>
 </span></code></pre></div></td></tr></table></div>
-<a href="https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/buid_ref.sh">build_ref.sh</a> splices raw reference panels (VCF files) to prepare the imputation panel for the GLIMPSE2 imputation process (bin files). </p>
+<a href="https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/build_ref.sh">build_ref.sh</a> splices raw reference panels (VCF files) to prepare the imputation panel for the GLIMPSE2 imputation process (bin files). </p>
 </div>
 <h3 id="imputation-process">Imputation process<a class="headerlink" href="#imputation-process" title="Permanent link">&para;</a></h3>
 <div class="admonition code">
@@ -1222,23 +1223,25 @@
 <span class="normal"><a href="#__codelineno-1-12">12</a></span>
 <span class="normal"><a href="#__codelineno-1-13">13</a></span>
 <span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">set</span><span class="w"> </span>-ue
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">set</span><span class="w"> </span>-ue
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">## INPUT</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nv">CHR</span><span class="o">=</span><span class="nv">$1</span><span class="w">              </span><span class="c1"># e.g. 1, 2, ..., 22</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">OUT</span><span class="o">=</span><span class="nv">$2</span><span class="w">              </span><span class="c1"># e.g. chr1_10x_lps_imputed.vcf.gz</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nv">CORES</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">3</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">     </span><span class="c1"># number of cores to use, default is 1</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nv">REF_FOLDER</span><span class="o">=</span><span class="si">${</span><span class="nv">4</span><span class="si">}</span><span class="w">     </span><span class="c1"># e.g. /path/to/reference_panel_folder</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>ls<span class="w"> </span>*<span class="si">${</span><span class="nv">COV</span><span class="si">}</span>_lps.bam<span class="w"> </span>&gt;<span class="w"> </span>run_bam_list.txt
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>run_imputation_bam_list.sh<span class="w">     </span>run_bam_list.txt<span class="w">         </span><span class="se">\</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">                               </span>chr<span class="si">${</span><span class="nv">CHR</span><span class="si">}</span><span class="w">                </span><span class="se">\</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">                               </span><span class="si">${</span><span class="nv">OUT</span><span class="si">}</span><span class="w">                   </span><span class="se">\</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">                               </span><span class="si">${</span><span class="nv">CORES</span><span class="si">}</span><span class="w">                 </span><span class="se">\</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">                               </span><span class="si">${</span><span class="nv">REF_FOLDER</span><span class="si">}</span><span class="w">            </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nv">COV</span><span class="o">=</span><span class="nv">$2</span><span class="w">              </span><span class="c1"># coverage prefix of the downsampled bam files</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nv">OUT</span><span class="o">=</span><span class="nv">$3</span><span class="w">              </span><span class="c1"># e.g. chr1_10x_lps_imputed.vcf.gz</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nv">CORES</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">4</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">     </span><span class="c1"># number of cores to use, default is 1</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nv">REF_FOLDER</span><span class="o">=</span><span class="si">${</span><span class="nv">5</span><span class="si">}</span><span class="w">     </span><span class="c1"># e.g. /path/to/reference_panel_folder</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>ls<span class="w"> </span>*<span class="si">${</span><span class="nv">COV</span><span class="si">}</span>_lps.bam<span class="w"> </span>&gt;<span class="w"> </span>run_bam_list.txt
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>run_imputation_bam_list.sh<span class="w">     </span>run_bam_list.txt<span class="w">         </span><span class="se">\</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">                               </span>chr<span class="si">${</span><span class="nv">CHR</span><span class="si">}</span><span class="w">                </span><span class="se">\</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">                               </span><span class="si">${</span><span class="nv">OUT</span><span class="si">}</span><span class="w">                   </span><span class="se">\</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">                               </span><span class="si">${</span><span class="nv">CORES</span><span class="si">}</span><span class="w">                 </span><span class="se">\</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">                               </span><span class="si">${</span><span class="nv">REF_FOLDER</span><span class="si">}</span><span class="w">            </span><span class="se">\</span>
 </span></code></pre></div></td></tr></table></div>
-Imputation processing on autosomes and ligating using <code>GLIMPSE2</code> (<a href="https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/run_imputation_bam_list.sh">run_imputation_bam_list.sh</a>)</p>
+Imputations were processed on autosomes and ligating using <a href="https://odelaneau.github.io/GLIMPSE/docs/documentation/phase/">GLIMPSE2_phase</a> and <a href="https://odelaneau.github.io/GLIMPSE/docs/documentation/ligate/">GLIMPSE2_ligate</a> (<a href="https://github.com/KTest-VN/lps_paper/blob/main/imputation/lowpass_imputation/bin/run_imputation_bam_list.sh">run_imputation_bam_list.sh</a>)</p>
 </div>
 <div class="admonition output">
 <p class="admonition-title">Output data</p>
@@ -1268,7 +1271,7 @@ Imputation processing on autosomes and ligating using <code>GLIMPSE2</code> (<a 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 6, 2025 05:55:46 UTC">July 6, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 15, 2025 10:20:28 UTC">July 15, 2025</span>
   </span>
 
     

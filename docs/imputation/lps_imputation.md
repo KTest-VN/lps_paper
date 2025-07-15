@@ -11,7 +11,7 @@
 
 ## Low-pass imputation process
 
-??? info "Low-pass imputation workflow"
+!!! info "Low-pass imputation workflow"
     ![](../assets/img/glimpse-workflow.png)
     The imputation reference panel (Ref VCF) was indexed using **GLIMPSE2** and subsequently processed through the *chunking* and *split_reference* steps to generate the appropriate binary input format. The prepared reference panel was then employed to impute genotype data from downsampled BAM files using **GLIMPSE2_phase** modules. Finally, imputed genomic chunks were merged via **GLIMPSE_ligate** to produce the final VCF outputs.
 

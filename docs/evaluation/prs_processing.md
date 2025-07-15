@@ -14,7 +14,7 @@
 
 The PRS processing scripts were developed with reference to the tutorial provided by Choi et al.[@choi2020tutorial] , which served as a foundational guide.
 
-??? info "PRS processing workflow"
+!!! info "PRS processing workflow"
     ![](../assets/img/PRS-workflow.png)
     Imputed VCF files were first merged using bcftools combine and annotated with reference information using bcftools annotate. The annotated VCFs were then converted to PLINK binary format (BED) and processed for quality control (QC) and duplicate removal using PLINK. PRSice was then used to calculate polygenic risk scores, using GWAS summary statistics and linkage disequilibrium (LD) reference panels as inputs. The final output consisted of individual-level PRS scores.
 

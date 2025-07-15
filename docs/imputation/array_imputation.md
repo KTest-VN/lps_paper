@@ -1,7 +1,7 @@
 !!! abstract "Requirements"
     - Ubuntu 22.04 (8 CPUs, 32 GB)
     - bcftools (version==1.13)
-    - shapeit5 (version==5.1.1)
+    - SHAPEIT5 (version==5.1.1)
     - Minimac3 (version==2.0.1)
     - Minimac4 (version==1.0.3)
 
@@ -11,14 +11,14 @@
     - Imputation panel
     - Pseudo-array VCFs
 
-??? info "Array imputation workflow"
+!!! info "Array imputation workflow"
     ![](../assets/img/pseudo-array-workflow.png)
-    The reference panel (VCF) was used directly as the phasing reference for pseudo-array genotype data (VCF) and was additionally indexed using **Minimac3** to produce the required m3vcf files for imputation. Phasing was performed prior to imputation, with intermediate results stored in BCF format. Imputation was then carried out using **Minimac4**, generating the final imputed VCF outputs.
+    The reference panel (VCF) was used directly as the phasing reference for pseudo-array genotype data (VCF) and was additionally indexed using **Minimac3** to produce the required m3vcf files for imputation. Phasing was performed prior to imputation using **SHAPEIT5**, with intermediate results stored in BCF format. Imputation was then carried out using **Minimac4**, generating the final imputed VCF outputs.
 
 ### Prepare imputation reference
 
 !!! code
-    This script extracts a reference panel, phases pseudo SNP array data using [Shapeit5][7], and prepares the reference for imputation by indexing it in [Minimac3][8] format.
+    This script extracts a reference panel, phases pseudo SNP array data using [SHAPEIT5][7], and prepares the reference for imputation by indexing it in [Minimac3][8] format.
 
     ```bash linenums="1"
     --8<--

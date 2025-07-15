@@ -28,7 +28,7 @@ Low-pass WGS is a **flexible and powerful alternative** to genotyping arrays, es
     font-size: 0.80em;
     text-align: justify;
   ">
-    Figure 1: Overview of the analytical pipeline. A) 10-fold cross-imputation approach; (1) 10% of the samples were downsampled (BAM files) or filtered to retain only array variants (VCF files) to generated pseudo LPS and pseudo array data; (2) these data were imputed using the remaining 90% of the samples as the reference panel; (3) the imputed data from all batches were combined and then were split by population; (4) performance was evaluated using high-coverage genotyping data as the ground truth. B) Data generation and imputation pipeline for LPS and SNP array data. 
+    Overview of the analytical pipeline. A) 10-fold cross-imputation approach; (1) 10% of the samples were downsampled (BAM files) or filtered to retain only array variants (VCF files) to generated pseudo LPS and pseudo array data; (2) these data were imputed using the remaining 90% of the samples as the reference panel; (3) the imputed data from all batches were combined and then were split by population; (4) performance was evaluated using high-coverage genotyping data as the ground truth. B) Data generation and imputation pipeline for LPS and SNP array data. 
 </figcaption>
 </br>
 

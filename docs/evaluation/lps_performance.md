@@ -1,11 +1,15 @@
 ## Evaluation methods
 ![evaluate methods](../assets/img/evaluate_methods.png)
 
-To assess imputation performance, two key metrics are used: {==Imputation Accuracy==} and {==Imputation Coverage==}. These metrics quantify the quality and completeness of imputed genetic variants, and are calculated per chromosome across all autosomes.
+To evaluate imputation performance, we employed two primary metrics: Imputation Accuracy and Imputation Coverage. 
+
+{==Imputation accuracy==} was quantified using the ^^SNP-wise Pearson correlation^^ ($r^2$) between imputed and true genotypes, whereas {==Imputation coverage==} was defined as the proportion of variants within each minor allele frequency (MAF) bin achieving $r^2\ge0.8$. 
+
+These metrics collectively assess both the reliability and completeness of imputed genetic data and were calculated on a per-chromosome basis across all autosomes. Our evaluation framework follows the methodology described in Nguyen et al., 2022[@nguyen2022comprehensive] 
 
 | Metric                  | Description                                     | Purpose                                                |
 |-------------------------|-------------------------------------------------|--------------------------------------------------------|
-| **Imputation Accuracy** | Mean $r^2$ of sites within a bin                 | Measures how well imputed values match true genotypes  |
+| **Imputation Accuracy** | Mean $r^2$ of sites within a MAF bin                 | Measures how well imputed values match true genotypes  |
 | **Imputation Coverage** | Proportion of variants with $r^2 \geq 0.8$ in a bin | Assesses the proportion of high-confidence imputations |
 
 ## Evaluation process

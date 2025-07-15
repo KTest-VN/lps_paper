@@ -3,8 +3,8 @@
 !!! abstract "Requirements"
     - Ubuntu 22.04 (8 CPUs, 32 GB)
     - bcftools (version==1.13)
-    - plink v1.90
-    - PRSice-2 v2.3.3
+    - [plink v1.90][4]
+    - [PRSice-2 v2.3.3][5]
 
 !!! input "Input data"
     - restructed lpWGS VCFs
@@ -16,6 +16,7 @@ The PRS processing scripts were developed with reference to the tutorial provide
 
 ??? info "PRS processing workflow"
     ![](../assets/img/PRS-workflow.png)
+    Imputed VCF files were first merged using bcftools combine and annotated with reference information using bcftools annotate. The annotated VCFs were then converted to PLINK binary format (BED) and processed for quality control (QC) and duplicate removal using PLINK. PRSice was then used to calculate polygenic risk scores, using GWAS summary statistics and linkage disequilibrium (LD) reference panels as inputs. The final output consisted of individual-level PRS scores.
 
 ## Correct sample name
 
@@ -86,3 +87,5 @@ Concatenate autosome VCF files have same prefix (Array name/ lowpass coverage).
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/prs_evaluation/LIST_NO_DUPLICATE.R
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/raw_prs_scores
 [3]: https://github.com/KTest-VN/lps_paper/tree/main/evaluation/downstream/data/process_prs_scores
+[4]: https://www.cog-genomics.org/plink/1.9/
+[5]: https://choishingwan.github.io/PRSice/step_by_step/

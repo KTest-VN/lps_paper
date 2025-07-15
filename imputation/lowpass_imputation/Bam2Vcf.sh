@@ -2,9 +2,10 @@ set -ue
 
 ## INPUT
 CHR=$1              # e.g. 1, 2, ..., 22
-OUT=$2              # e.g. chr1_10x_lps_imputed.vcf.gz
-CORES="${3:-1}"     # number of cores to use, default is 1
-REF_FOLDER=${4}     # e.g. /path/to/reference_panel_folder
+COV=$2              # coverage prefix of the downsampled bam files
+OUT=$3              # e.g. chr1_10x_lps_imputed.vcf.gz
+CORES="${4:-1}"     # number of cores to use, default is 1
+REF_FOLDER=${5}     # e.g. /path/to/reference_panel_folder
 
 ls *${COV}_lps.bam > run_bam_list.txt
 

@@ -1,5 +1,5 @@
-- 10-fold cross-validation is used for selected 2054 samples.
-- Samples are distributed in 10 batches and stratified by superpopulation (EAS, EUR, SAS, AFR, AMR) to ensure balanced representation:
+- Ten-fold cross-validation was performed on the selected 2,504 non-trio samples.
+- Samples were divided into 10 batches and stratified by superpopulation (EAS, EUR, SAS, AFR, AMR) to ensure balanced representation. In this study, superpopulations are treated as populations.
     - 4 batches of 251 samples
     - 6 batches of 250 samples
 - In each fold:

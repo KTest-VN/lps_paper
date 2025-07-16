@@ -2,13 +2,13 @@
 
 This documentation provides comprehensive information on the code, data, and methods used in the article.
 
-## Study Summary: Comparing genotyping arrays and low-pass WGS
-
 Traditional GWAS and PGS studies utilize SNP arrays with genotype imputation; however, **low-pass whole-genome sequencing (lpWGS)** has emerged as a strong alternative.
+
+**General purpose**: To compare the performance of genotyping arrays and low-pass WGS.
 
 ### Study Design
 - **Compared**: 8 genotyping arrays vs. 6 lpWGS coverage levels (0.5× to 2×)
-- **Population**: 2,504 individuals from the 1000 Genomes Project
+- **Population**: 2,504 individuals from five superpopulations in the 1000 Genomes Project.
 - **Methods**: Applied 10-fold cross-validation to perform genotype imputation and evaluate polygenic scores (PGS) across 4 traits. Results were summarized and assessed for performance.
 
 ### Key Findings

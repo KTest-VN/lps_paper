@@ -42,7 +42,7 @@ These metrics collectively assess both the reliability and completeness of imput
     |                     | LPS                  | Pseudo array           |
     |:--------------------|:---------------------|:-----------------------|
     | SNP-wise accuracy   | [lps_all_acc.txt][6] | [array_all_acc.txt][4] |
-    | Imputation accuracy | [lps_all_cov.txt][7] | [array_all_cov.txt][5] |
+    | Imputation coverage | [lps_all_cov.txt][7] | [array_all_cov.txt][5] |
 
 [1]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/compute_MAF.sh
 [2]: https://github.com/KTest-VN/lps_paper/blob/main/evaluation/lps_evaluation/bin/run_evaluate.py

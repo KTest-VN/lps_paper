@@ -5,6 +5,10 @@
     - bcftools (version==1.13)
     - [plink v1.90][4]
     - [PRSice-2 v2.3.3][5]
+    - R v4.2.2
+        - data.table (version==1.17.8)
+        - ggplot2 (version==3.5.2)
+        - scales (version==1.4.0)
 
 !!! input "Input data"
     - restructed lpWGS VCFs
@@ -75,8 +79,8 @@ Concatenate autosome VCF files have same prefix (Array name/ lowpass coverage).
 
 ## Prepare percentile PRS scores
 !!! code
-    ```bash linenums="1"
-    ...
+    ```{.R linenums="1" }
+    ---8<--- "evaluation/prs_evaluation/get_pcf.R"
     ```
 
 !!! output "Output data"

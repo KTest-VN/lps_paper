@@ -1,7 +1,7 @@
 {
   "name": "MkDocs Dev Container",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "pip install -r .devcontainer/requirements.txt",
+  "postCreateCommand": "sudo bash .devcontainer/install_R.sh && pip install -r .devcontainer/requirements.txt",
   "customizations": {
     "vscode": {
       "extensions": [

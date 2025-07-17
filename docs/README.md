@@ -4,6 +4,8 @@ This documentation provides comprehensive information on the code, data, and met
 
 Traditional GWAS and PGS studies utilize SNP arrays with genotype imputation; however, **low-pass whole-genome sequencing (lpWGS)** has emerged as a strong alternative.
 
+## Article Summary
+
 **General purpose**: To compare the performance of genotyping arrays and low-pass WGS.
 
 ### Study Design
@@ -19,7 +21,7 @@ Traditional GWAS and PGS studies utilize SNP arrays with genotype imputation; ho
 ### Conclusion
 Low-pass WGS is a **flexible and powerful alternative** to genotyping arrays, especially valuable for studies involving **diverse or underrepresented populations**.
 
-## Analytical Pipeline Summary
+### Analytical Pipeline
 
 ![Overview](assets/img/Fig1.jpg)
 <figcaption style="

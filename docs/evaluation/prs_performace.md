@@ -26,19 +26,37 @@ These evaluations were conducted across multiple **p-value thresholds** to ensur
 === "PGS correlation"
     ## PGS correlation
 
-    - It is the {==Pearson correlation coefficient between imputed and true sets==} of raw PGS values computed for the same individuals.
-    - Interpretation: Measures {==how similar the PGS values are in scale and ranking==} across two methods.
+    Pearson’s correlation {==quantifies the degree of linear agreement==} between PGS derived from imputed SNP array or low-pass sequencing (LPS) data and those from high-coverage (30X) whole-genome sequencing (WGS), providing a direct measure of score concordance.
+
+    PGS correlation was quantified using Pearson's correlation coefficient between the array/LPS-based PGS ($X$) and the 30X WGS-based PGS ($Y$):
+
+    $$
+    r = \frac{\sum_{i=1}^N (X_i - \bar{X}) (Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^N (X_i - \bar{X})^2} \, \sqrt{\sum_{i=1}^N (Y_i - \bar{Y})^2}},
+    $$
+
+    with $r^2$ used for reporting. Correlations were calculated separately for each population, phenotype, and feature type (array or LPS), and visualized in bar chart.
+
 
 
 === "ADPR"
     ## Absolute Difference in Percentile Ranking (ADPR)
 
-    - It is the {==average absolute difference in percentile rank==} of each individual between imputed and true sets of PGS.
-    - Formula:
+    Absolute Difference in Percentile Ranking (ADPR) complements this by {==assessing the stability of individuals’ relative positions==} between platforms, which is critical for downstream applications such as risk stratification and clinical decision-making.
 
-        \[
-            \text{ADPR} = \frac{1}{N} \sum_{i=1}^{N} \left| \text{percentile}_i^{(A)} - \text{percentile}_i^{(B)} \right|
-        \]
+    To quantify concordance in relative standing between platforms, raw PGS values were transformed to within-platform percentiles using the empirical cumulative distribution function (ECDF):
+    
+    $$
+    p^{(m)}_i = \frac{\mathrm{rank}_m(i)}{N},
+    $$
 
-        - `N` is the number of individuals
-        - `percentile_i_A` and `percentile_i_B` are the percentile ranks of individual `i` in each PGS imputed and true distribution
+    where $p^{(m)}_i$ denotes the percentile of individual $i$ in method $m$ (array/LPS or WGS), $\mathrm{rank}_m(i)$ is the individual’s rank, and $N$ is the sample size.
+
+    The Absolute Difference in Percentile Ranking for individual $i$ was defined as:
+    
+    $$
+    ADPR_i = \left| p^{(\mathrm{array/LPS})}_i - p^{(\mathrm{WGS})}_i \right| \times 100,
+    $$
+    
+    expressed in percentage points. An ADPR of $0\%$ indicates identical rankings, whereas higher values denote greater rank displacement between platforms. ADPR values were summarised across populations, phenotypes, and feature types, and visualised to assess platform-specific deviations in ranking concordance.
+
+

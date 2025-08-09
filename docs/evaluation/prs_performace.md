@@ -1,10 +1,10 @@
 PGS performance was evaluated using two main metrics:
 
 1. {==PGS Correlation==}  
-   Pearson’s correlation between PGS derived from imputed SNP array data and PGS from whole-genome sequencing (WGS).
+   Pearson’s correlation between PGS derived from imputed SNP array or low-pass WGS data and those obtained from high-coverage (30×) WGS.
 
 2. {==ADPR (Absolute Difference in Percentile Ranking)==}  
-   The absolute difference in percentile ranking between PGS from array-imputed data and the WGS-derived gold standard.
+   The absolute difference in percentile ranking between PGS obtained from array-imputed or low-pass WGS data and those derived from the high-coverage WGS gold standard.
 
 These evaluations were conducted across multiple **p-value thresholds** to ensure unbiased comparison, based on the method from Nguyen et al., 2022[@nguyen2022comprehensive].
 

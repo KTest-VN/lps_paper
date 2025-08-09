@@ -1081,11 +1081,11 @@
 <ol>
 <li>
 <p><mark class="critic">PGS Correlation</mark><br />
-   Pearson’s correlation between PGS derived from imputed SNP array data and PGS from whole-genome sequencing (WGS).</p>
+   Pearson’s correlation between PGS derived from imputed SNP array or low-pass WGS data and those obtained from high-coverage (30×) WGS.</p>
 </li>
 <li>
 <p><mark class="critic">ADPR (Absolute Difference in Percentile Ranking)</mark><br />
-   The absolute difference in percentile ranking between PGS from array-imputed data and the WGS-derived gold standard.</p>
+   The absolute difference in percentile ranking between PGS obtained from array-imputed or low-pass WGS data and those derived from the high-coverage WGS gold standard.</p>
 </li>
 </ol>
 <p>These evaluations were conducted across multiple <strong>p-value thresholds</strong> to ensure unbiased comparison, based on the method from Nguyen et al., 2022<sup id="fnref:nguyen2022comprehensive"><a class="footnote-ref" href="#fn:nguyen2022comprehensive">1</a></sup>.</p>
@@ -1107,26 +1107,26 @@ PGS_i(P_T) = \sum_{j=1}^{M} {1}_{\{P_j &lt; P_T\}} \, x_{ij} \, \hat{\beta}_j
 <div class="tabbed-content">
 <div class="tabbed-block">
 <h2 id="pgs-correlation">PGS correlation<a class="headerlink" href="#pgs-correlation" title="Permanent link">&para;</a></h2>
-<ul>
-<li>It is the <mark class="critic">Pearson correlation coefficient between imputed and true sets</mark> of raw PGS values computed for the same individuals.</li>
-<li>Interpretation: Measures <mark class="critic">how similar the PGS values are in scale and ranking</mark> across two methods.</li>
-</ul>
+<p>Pearson’s correlation <mark class="critic">quantifies the degree of linear agreement</mark> between PGS derived from imputed SNP array or low-pass sequencing (LPS) data and those from high-coverage (30X) whole-genome sequencing (WGS), providing a direct measure of score concordance.</p>
+<p>PGS correlation was quantified using Pearson's correlation coefficient between the array/LPS-based PGS (<span class="arithmatex">\(X\)</span>) and the 30X WGS-based PGS (<span class="arithmatex">\(Y\)</span>):</p>
+<div class="arithmatex">\[
+r = \frac{\sum_{i=1}^N (X_i - \bar{X}) (Y_i - \bar{Y})}{\sqrt{\sum_{i=1}^N (X_i - \bar{X})^2} \, \sqrt{\sum_{i=1}^N (Y_i - \bar{Y})^2}},
+\]</div>
+<p>with <span class="arithmatex">\(r^2\)</span> used for reporting. Correlations were calculated separately for each population, phenotype, and feature type (array or LPS), and visualized in bar chart.</p>
 </div>
 <div class="tabbed-block">
 <h2 id="absolute-difference-in-percentile-ranking-adpr">Absolute Difference in Percentile Ranking (ADPR)<a class="headerlink" href="#absolute-difference-in-percentile-ranking-adpr" title="Permanent link">&para;</a></h2>
-<ul>
-<li>It is the <mark class="critic">average absolute difference in percentile rank</mark> of each individual between imputed and true sets of PGS.</li>
-<li>
-<p>Formula:</p>
+<p>Absolute Difference in Percentile Ranking (ADPR) complements this by <mark class="critic">assessing the stability of individuals’ relative positions</mark> between platforms, which is critical for downstream applications such as risk stratification and clinical decision-making.</p>
+<p>To quantify concordance in relative standing between platforms, raw PGS values were transformed to within-platform percentiles using the empirical cumulative distribution function (ECDF):</p>
 <div class="arithmatex">\[
-    \text{ADPR} = \frac{1}{N} \sum_{i=1}^{N} \left| \text{percentile}_i^{(A)} - \text{percentile}_i^{(B)} \right|
+p^{(m)}_i = \frac{\mathrm{rank}_m(i)}{N},
 \]</div>
-<ul>
-<li><code>N</code> is the number of individuals</li>
-<li><code>percentile_i_A</code> and <code>percentile_i_B</code> are the percentile ranks of individual <code>i</code> in each PGS imputed and true distribution</li>
-</ul>
-</li>
-</ul>
+<p>where <span class="arithmatex">\(p^{(m)}_i\)</span> denotes the percentile of individual <span class="arithmatex">\(i\)</span> in method <span class="arithmatex">\(m\)</span> (array/LPS or WGS), <span class="arithmatex">\(\mathrm{rank}_m(i)\)</span> is the individual’s rank, and <span class="arithmatex">\(N\)</span> is the sample size.</p>
+<p>The Absolute Difference in Percentile Ranking for individual <span class="arithmatex">\(i\)</span> was defined as:</p>
+<div class="arithmatex">\[
+ADPR_i = \left| p^{(\mathrm{array/LPS})}_i - p^{(\mathrm{WGS})}_i \right| \times 100,
+\]</div>
+<p>expressed in percentage points. An ADPR of <span class="arithmatex">\(0\%\)</span> indicates identical rankings, whereas higher values denote greater rank displacement between platforms. ADPR values were summarised across populations, phenotypes, and feature types, and visualised to assess platform-specific deviations in ranking concordance.</p>
 </div>
 </div>
 </div>
@@ -1160,7 +1160,7 @@ PGS_i(P_T) = \sum_{j=1}^{M} {1}_{\{P_j &lt; P_T\}} \, x_{ij} \, \hat{\beta}_j
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2025 07:05:29 UTC">June 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 9, 2025 07:10:37 UTC">August 9, 2025</span>
   </span>
 
     

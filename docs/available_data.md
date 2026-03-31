@@ -28,7 +28,7 @@ You are free to copy, modify, distribute, and use the data for any purpose, even
 [1]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/maps 
 [2]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/sample_list
 [3]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/input_array
-[4]: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/
+[4]: https://42basepairs.com/browse/s3/1000genomes/technical/reference/GRCh38_reference_genome
 [6]: https://github.com/KTest-VN/lps_paper/tree/main/support_data/meta_10_folds
 [7]: https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased
 [8]: https://github.com/KTest-VN/lps_paper/blob/main/support_data/2504_samples.txt

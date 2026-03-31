@@ -3,7 +3,7 @@ set -ue  # Exit on error and treat unset variables as error
 
 # Install R base
 apt-get update
-apt-get install -y r-base=4.2.2.20221110-2
+apt-get install -y r-base
 
 # Install remotes for versioned packages
 R -e "install.packages('remotes', repos='https://cloud.r-project.org')"

@@ -22,6 +22,21 @@ The PRS processing scripts were developed with reference to the tutorial provide
     ![](../assets/img/PRS-workflow.png)
     Imputed VCF files were first merged using bcftools combine and annotated with reference information using bcftools annotate. The annotated VCFs were then converted to PLINK binary format (BED) and processed for quality control (QC) and duplicate removal using PLINK. PRSice was then used to calculate polygenic risk scores, using GWAS summary statistics and linkage disequilibrium (LD) reference panels as inputs. The final output consisted of individual-level PRS scores.
 
+## Summary statistic
+
+The base data (GWAS summary statistics) for the selected phenotypes must undergo a rigorous quality control (QC) process to ensure its reliability.
+
+!!! info "GWAS Summary Statistics Sources"
+    The specific GWAS summary statistics used for each phenotype were obtained from the GWAS Catalog:
+
+    | Phenotype | GWAS Catalog ID | Source |
+    | :--- | :--- | :--- |
+    | **Height** | [GCST006901](https://www.ebi.ac.uk/gwas/studies/GCST006901) | Yengo et al. (2018) |
+    | **BMI** | [GCST006900](https://www.ebi.ac.uk/gwas/studies/GCST006900) | Yengo et al. (2018) |
+    | **Type 2 Diabetes** | [GCST006867](https://www.ebi.ac.uk/gwas/studies/GCST006867) | Xue et al. (2018) |
+    | **Metabolic Disorder** | [GCST90444487](https://www.ebi.ac.uk/gwas/studies/GCST90444487) | Park et al. (2024) |
+
+
 ## Correct sample name
 
 Ensure that sample names do not contain underscores, as these may be introduced during the merging of imputed VCF files. In such cases, the filename used during merging may be incorporated into the sample name to maintain uniqueness across datasets.

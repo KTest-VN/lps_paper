@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
     git=1:2.47.3-0+deb13u1 \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /workspace
+RUN git config --global --add safe.directory /workspace
 
 # Install Python deps
 COPY .devcontainer/requirements.txt .

@@ -818,6 +818,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#summary-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary statistic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#correct-sample-name" class="md-nav__link">
     <span class="md-ellipsis">
       Correct sample name
@@ -1099,6 +1108,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#summary-statistic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary statistic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#correct-sample-name" class="md-nav__link">
     <span class="md-ellipsis">
       Correct sample name
@@ -1219,6 +1237,43 @@
 <p class="admonition-title">PRS processing workflow</p>
 <p><a class="glightbox" href="../../assets/img/PRS-workflow.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../assets/img/PRS-workflow.png" /></a>
 Imputed VCF files were first merged using bcftools combine and annotated with reference information using bcftools annotate. The annotated VCFs were then converted to PLINK binary format (BED) and processed for quality control (QC) and duplicate removal using PLINK. PRSice was then used to calculate polygenic risk scores, using GWAS summary statistics and linkage disequilibrium (LD) reference panels as inputs. The final output consisted of individual-level PRS scores.</p>
+</div>
+<h2 id="summary-statistic">Summary statistic<a class="headerlink" href="#summary-statistic" title="Permanent link">&para;</a></h2>
+<p>The base data (GWAS summary statistics) for the selected phenotypes must undergo a rigorous quality control (QC) process to ensure its reliability.</p>
+<div class="admonition info">
+<p class="admonition-title">GWAS Summary Statistics Sources</p>
+<p>The specific GWAS summary statistics used for each phenotype were obtained from the GWAS Catalog:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Phenotype</th>
+<th style="text-align: left;">GWAS Catalog ID</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Height</strong></td>
+<td style="text-align: left;"><a href="https://www.ebi.ac.uk/gwas/studies/GCST006901">GCST006901</a></td>
+<td style="text-align: left;">Yengo et al. (2018)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>BMI</strong></td>
+<td style="text-align: left;"><a href="https://www.ebi.ac.uk/gwas/studies/GCST006900">GCST006900</a></td>
+<td style="text-align: left;">Yengo et al. (2018)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Type 2 Diabetes</strong></td>
+<td style="text-align: left;"><a href="https://www.ebi.ac.uk/gwas/studies/GCST006867">GCST006867</a></td>
+<td style="text-align: left;">Xue et al. (2018)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Metabolic Disorder</strong></td>
+<td style="text-align: left;"><a href="https://www.ebi.ac.uk/gwas/studies/GCST90444487">GCST90444487</a></td>
+<td style="text-align: left;">Park et al. (2024)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <h2 id="correct-sample-name">Correct sample name<a class="headerlink" href="#correct-sample-name" title="Permanent link">&para;</a></h2>
 <p>Ensure that sample names do not contain underscores, as these may be introduced during the merging of imputed VCF files. In such cases, the filename used during merging may be incorporated into the sample name to maintain uniqueness across datasets.</p>
@@ -1760,7 +1815,7 @@ Imputed VCF files were first merged using bcftools combine and annotated with re
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 09:51:27 UTC">July 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 31, 2026 15:19:16 UTC">March 31, 2026</span>
   </span>
 
     

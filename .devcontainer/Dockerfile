@@ -16,5 +16,18 @@ RUN git config --global --add safe.directory /workspace
 COPY .devcontainer/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# ---- Create vscode user (same pattern as devcontainers) ----
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    && apt-get update && apt-get install -y sudo \
+    && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && rm -rf /var/lib/apt/lists/*
+
+USER $USERNAME
+
 # Default command
 ENTRYPOINT /bin/bash

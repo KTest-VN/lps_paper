@@ -5,25 +5,29 @@ on:
 
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+
+      # 1. Build Docker image
       - name: Build Docker image
-        run: |
-          docker build -t mkdocs-site -f .devcontainer/Dockerfile .
-      - name: Deploy with MkDocs
+        run: docker build -t mkdocs-site -f .devcontainer/Dockerfile .
+
+      # 2. Build static site using Docker
+      - name: Build site
         run: |
           docker run --rm \
             -v ${{ github.workspace }}:/app \
-            -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
             mkdocs-site \
-            mkdocs gh-deploy --force
+            mkdocs build
+
+      # 3. Deploy using GitHub Action
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
